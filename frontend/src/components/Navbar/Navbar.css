@@ -1,0 +1,57 @@
+.navbar{
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0px;
+    border-radius: 0px 0px 0px 15px;
+    box-shadow: 0px 5px 2px 1px rgba(227, 14, 14, 0.701);
+    background-color: rgba(213, 213, 207, 0.236);
+}
+
+.navbar-menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+    font-size:20px;
+    cursor:pointer;
+    color:rgb(90, 92, 92);
+}
+
+.navbar-menu li{
+    cursor: pointer;
+}
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login_button {
+    border:1px solid rgb(227, 14, 14);
+    border-radius:20px;
+    padding:5px 15px 0px;
+    cursor:pointer;
+    background-color: rgb(255,255,255);
+    color:rgb(90, 92, 92);
+    transition: 0.3s;
+}
+
+.login_button:hover{
+    background-color: rgba(178, 181, 181, 0.762);
+}
+
+.navbar-right .login_button .login_text{
+    font-size: 17px;
+    vertical-align: 10px;
+}
+
+.logo{
+    width: 13%;
+}
+
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgb(226,14,59);
+}

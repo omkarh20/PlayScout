@@ -1,11 +1,39 @@
-import React from 'react'
+import React from 'react';
+import './Footer.css';
+import { assets } from '../../assets/assets';
 
 const Footer = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <div className='footer' id='footer'>
+      <div className="footer-content">
+        <div className="footer-content-left">
+            <img src={assets.logo} id='logo' alt="Logo" />
+        </div>
+        
+        <div className="footer-content-center">
+          <h2>Company</h2>
+          <ul>
+            <li>About Us</li>
+            <li>Privacy Policy</li>
+            <li>Contact Us</li>
+            <li className='contact'>+91-9456327543</li>
+            <li className='contact'>contact@playscout.com</li>
+          </ul>
+        </div>
 
-export default Footer
+        <div className="footer-content-right">
+          <h2>Follow Us</h2>
+          <div className="footer-social-icons">
+              <img src={assets.facebook_icon} alt="Facebook" />
+              <img src={assets.twitter_icon} alt="Twitter" />
+              <img src={assets.linkedin_icon} alt="LinkedIn" />
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p className="footer-copyright">Copyright 2024 © PlayScout.com -All Rights Reserved</p>
+    </div>
+  );
+};
+
+export default Footer;

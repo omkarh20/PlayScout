@@ -1,12 +1,18 @@
 .navbar{
-    padding: 10px 10px;
+    padding: 5px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: 0px;
-    border-radius: 0px 0px 0px 15px;
-    box-shadow: 0px 5px 2px 1px rgba(227, 14, 14, 0.701);
-    background-color: rgba(213, 213, 207, 0.236);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0px 3px 2px 1px rgb(227, 14, 14);
+    background-color: rgba(255,255,255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
 }
 
 .navbar-menu{

@@ -1,39 +1,51 @@
-.header{
-    margin: 30px 30px;
-    height: 30vw;
+.header-card{
+  padding: 10px;
+  width: 100%;
+  background-color: white; 
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  margin: 80px auto; 
+  overflow: hidden; 
+}
+
+.header {
+    margin: 30px 30px 30px;
+    height: 30vw; 
     display: flex;
     gap: 0;
-}
-
-.header-contents-left{
-    background: url('/football1.jpg') no-repeat;
-    background-size: cover;
-    position: relative;
+  }
+  
+  .header-contents-left,
+  .header-contents-right {
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 100%; 
+    height: 100%; 
     flex: 1;
-}
-
-.header-contents-right{
-    background: url('/football_court1.jpg') no-repeat;
-    background-size: cover;
+    transition: background-image 0.2s ease-in-out; 
     position: relative;
-    flex: 1;
-}
-
-.header-contents-left h1,h2,p{
+  }
+  
+  .header-contents-left h1,h3,p{
     color: white;
     position: absolute;
     left: 3vw;
-    animation: fadeIn 3s;
-}
-
-.header-contents-left h1{
+    animation: fadeIn 1.5s;
+    font-weight: 350;
+  }
+  
+  .header-contents-left h1 {
     bottom: 28%;
-}
-
-.header-contents-left h2{
+    font-weight: 500;
+  }
+  
+  .header-contents-left h3 {
     bottom: 20%;
-}
-
-.header-contents-left p{
-    bottom: 10%;
-}
+    font-weight: 500;
+  }
+  
+  .header-contents-left p {
+    bottom: 7%;
+    font-size: 90%;
+  }

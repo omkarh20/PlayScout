@@ -10,6 +10,9 @@ import squash from './squash.jpg'
 import facebook_icon from './facebook_icon.png'
 import twitter_icon from './twitter_icon.png'
 import linkedin_icon from './linkedin_icon.png'
+import cross_icon from './cross_icon.png'
+import email_icon from './email_icon.png'
+import password_icon from './password_icon.png'
 
 export const assets = {
     search_icon,
@@ -17,7 +20,10 @@ export const assets = {
     logo,
     facebook_icon,
     twitter_icon,
-    linkedin_icon
+    linkedin_icon,
+    cross_icon,
+    email_icon,
+    password_icon
 }
 
 export const sport_list = [

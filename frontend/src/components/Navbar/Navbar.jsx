@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
 
   const [menu,setMenu] = useState("home");
 
@@ -17,8 +17,8 @@ const Navbar = () => {
         <li onClick={()=>setMenu("news")} className={menu==="news"?"active":""}>News</li>
       </ul>
       <div className="navbar-right">
-      <img src={assets.profile_icon} alt="" className='profile_icon' />
-        <button className='login_button'><span className="login_text">Login / SignUp</span></button>
+        <img src={assets.profile_icon} alt="" className='profile_icon' />
+        <button onClick={() => setShowLogin(true)} className='login_button'><span className="login_text">Login / SignUp</span></button>
       </div>
     </div>
   )

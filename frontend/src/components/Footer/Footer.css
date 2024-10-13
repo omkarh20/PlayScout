@@ -44,7 +44,8 @@
     width: 80%;
 }
 
-.footer p,h2{
+.footer p,
+.footer h2{
     position: relative;
     color: white;
 }

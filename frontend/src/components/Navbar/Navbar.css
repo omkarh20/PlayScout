@@ -45,7 +45,7 @@
 }
 
 .login_button:hover{
-    background-color: rgba(178, 181, 181, 0.762);
+    background-color: rgba(188, 37, 14, 0.762);
 }
 
 .navbar-right .login_button .login_text{
@@ -60,4 +60,67 @@
 .navbar .active{
     padding-bottom: 2px;
     border-bottom: 2px solid rgb(226,14,59);
+}
+
+@media (min-width: 2000px){
+    .navbar-menu{
+        gap: 40px;
+        font-size: 35px;
+    }
+    .navbar-right{
+        gap: 30px;
+        margin-right: 10px;
+    }
+    .navbar-right img{
+        width: 35px;
+    }
+    .navbar-right button{
+        padding: 8px 32px;
+    }
+}
+
+
+@media (max-width: 1050px){
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar-menu{
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width: 900px){
+    .navbar .logo{
+        width: 120px;
+    }
+    .navbar-menu{
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right{
+        gap: 20px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right button{
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 750px){
+    .navbar-menu{
+        display: none;
+    }
 }

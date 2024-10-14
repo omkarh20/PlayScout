@@ -1,0 +1,64 @@
+.main {
+    padding: 20px 100px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.bottom { 
+    display: flex;
+    gap:30px;
+    padding:15px 300px;
+ 
+}
+.bottom .sort{ background: transparent;
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #49557e;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.bottom .sport{ background: transparent;
+    background-color:#ffffff;
+    font-size: 16px;
+    color: #49557e;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.bottom .date{ background: transparent;
+    background-color:#ffffff;
+    font-size: 16px;
+    color: #49557e;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.Phead {
+    display: flex;
+    justify-content: space-between; /* Use space-between for proper spacing */
+    align-items: center;
+}
+
+.Phead .left {
+    background: transparent;
+    background-color: #49557e19;
+    font-size: 16px;
+    color: #49557e;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Phead .right {
+    font-size: 30px;
+}
+

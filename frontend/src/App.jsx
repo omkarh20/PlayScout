@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
+import Meet from './pages/Meet/Meet'
 import Footer from './components/Footer/Footer'
 import LoginPopup from './components/LoginPopup/LoginPopup'
 
@@ -16,6 +17,7 @@ const App = () => {
         <Navbar setShowLogin = {setShowLogin} />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/meet' element={<Meet />} />
         </Routes>
       </div>
       <Footer />

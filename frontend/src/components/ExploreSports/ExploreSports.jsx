@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './ExploreSports.css';
-import { sport_list } from '../../assets/assets';
-import leftIcon from '../../assets/shuttle_left.png'; 
-import rightIcon from '../../assets/shuttle_right.png'; 
+import '../../assets/assets'
+import { assets } from '../../assets/assets';
+import { StoreContext } from '../../context/StoreContext';
 
 const ExploreSports = () => {
   const scrollLeft = () => {
@@ -19,12 +19,15 @@ const ExploreSports = () => {
     });
   };
 
+
+  const {sport_list} = useContext(StoreContext)
+
   return (
     <div className="explore-sports-card">
       <div className="explore-sports">
         <h1>Explore Sports</h1>
         <div className="explore-sports-container">
-          <img className="scroll-icon left-icon" src={leftIcon} alt="Scroll Left" onClick={scrollLeft} />
+          <img className="scroll-icon left-icon" src={assets.leftIcon} alt="Scroll Left" onClick={scrollLeft} />
           <div className="explore-sports-list">
             {sport_list.map((item, index) => {
               return (
@@ -35,7 +38,7 @@ const ExploreSports = () => {
               );
             })}
           </div>
-          <img className="scroll-icon right-icon" src={rightIcon} alt="Scroll Right" onClick={scrollRight} />
+          <img className="scroll-icon right-icon" src={assets.rightIcon} alt="Scroll Right" onClick={scrollRight} />
         </div>
       </div>
     </div>

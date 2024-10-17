@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
+import { Link } from 'react-router-dom';
 
 const Navbar = ({setShowLogin}) => {
 
@@ -10,9 +11,9 @@ const Navbar = ({setShowLogin}) => {
     <div className='navbar'>
       <img src={assets.logo} alt="" className='logo' />
       <ul className="navbar-menu">
-        <li onClick={()=>setMenu("home")} className={menu==="home"?"active":""}>Home</li>
+        <Link to='./'><li onClick={()=>setMenu("home")} className={menu==="home"?"active":""}>Home</li></Link>
         <li onClick={()=>setMenu("book")} className={menu==="book"?"active":""}>Book</li>
-        <li onClick={()=>setMenu("meet")} className={menu==="meet"?"active":""}>Meet</li>
+        <Link to='./meet'><li onClick={()=>setMenu("meet")} className={menu==="meet"?"active":""}>Meet</li></Link>
         <li onClick={()=>setMenu("chat")} className={menu==="chat"?"active":""}>Chat</li>
         <li onClick={()=>setMenu("news")} className={menu==="news"?"active":""}>News</li>
       </ul>

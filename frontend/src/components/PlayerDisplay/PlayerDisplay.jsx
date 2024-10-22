@@ -14,6 +14,7 @@ const PlayerDisplay = ({category}) => {
             return <PlayerObject 
                       key={index} 
                       id={item._id} 
+                      className = 'player-display-list-item'
                       date={item.date}
                       sportIcon={item.sportIcon} 
                       sportName={item.sportName}

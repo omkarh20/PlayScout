@@ -7,6 +7,9 @@ import football from './football.jpg'
 import badminton from './badminton.png'
 import volleyball from './volleyball.jpg'
 import squash from './squash.jpg'
+import tabletennis from './tabletennis.jpg'
+import swimming from './swimming.jpg'
+import tennis from './tennis.jpg'
 import facebook_icon from './facebook_icon.png'
 import twitter_icon from './twitter_icon.png'
 import linkedin_icon from './linkedin_icon.png'
@@ -29,6 +32,19 @@ import squash_icon from './squash_icon.png'
 import hockey_icon from './hockey_icon.png'
 import swimming_icon from './swimming_icon.png'
 import chess_icon from './chess_icon.png'
+import tennis_icon from './tennis_icon.png'
+import tabletennis_icon from './tabletennis_icon.png'
+import yoga_icon from './yoga_icon.png'
+import f_avatar1 from './f_avatar1.png'
+import f_avatar2 from './f_avatar2.png'
+import f_avatar3 from './f_avatar3.png'
+import f_avatar4 from './f_avatar4.png'
+import f_avatar5 from './f_avatar5.png'
+import m_avatar1 from './m_avatar1.png'
+import m_avatar2 from './m_avatar2.png'
+import m_avatar3 from './m_avatar3.png'
+import m_avatar4 from './m_avatar4.png'
+import m_avatar5 from './m_avatar5.png'
 
 export const assets = {
     search_icon,
@@ -55,8 +71,28 @@ export const assets = {
     hockey_icon,
     swimming_icon,
     squash_icon,
-    chess_icon
+    chess_icon,
+    tennis_icon,
+    tabletennis_icon,
+    yoga_icon,
+    f_avatar1,
+    f_avatar2,
+    f_avatar3,
+    f_avatar4,
+    f_avatar5,
+    m_avatar1,
+    m_avatar2,
+    m_avatar3,
+    m_avatar4,
+    m_avatar5
 }
+
+export const scroll = (className, scrollAmount) => {
+    document.querySelector(`.${className}`).scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+};
 
 export const sport_list = [
     {
@@ -82,6 +118,18 @@ export const sport_list = [
     {
         sport_name: "Squash",
         sport_image: squash
+    },
+    {
+        sport_name: "Table Tennis",
+        sport_image: tabletennis
+    },
+    {
+        sport_name: "Swimming",
+        sport_image: swimming
+    },
+    {
+        sport_name: "Tennis",
+        sport_image: tennis
     }
 ]
 
@@ -91,7 +139,7 @@ export const player_list = [
         date: "16th Oct,2024  9:00-10:30",
         sportIcon: basketball_icon,
         sportName: "Basketball",
-        userImage: trophy_icon,
+        userImage: m_avatar1,
         userName: "Prajwal R G",
         membersJoined: 1,
         totalMembers: 10,
@@ -103,7 +151,7 @@ export const player_list = [
         date: "16th Oct,2024  11:00-12:00",
         sportIcon: badminton_icon,
         sportName: "Badminton",
-        userImage: trophy_icon,
+        userImage: m_avatar3,
         userName: "Nipun Rao",
         membersJoined: 2,
         totalMembers: 4,
@@ -115,7 +163,7 @@ export const player_list = [
         date: "16th Oct,2024  11:00-12:00",
         sportIcon: football_icon,
         sportName: "Football",
-        userImage: trophy_icon,
+        userImage: m_avatar2,
         userName: "Mallikarjun",
         membersJoined: 2,
         totalMembers: 11,
@@ -124,10 +172,10 @@ export const player_list = [
     },
     {
         _id: "4",
-        date: "16th Oct,2024  11:00-1:00",
+        date: "16th Oct,2024  11:00-13:00",
         sportIcon: cricket_icon,
         sportName: "Cricket",
-        userImage: trophy_icon,
+        userImage: m_avatar5,
         userName: "Nishant Hegde",
         membersJoined: 7,
         totalMembers: 11,
@@ -136,10 +184,10 @@ export const player_list = [
     },
     {
         _id: "5",
-        date: "16th Oct,2024  1:00-2:00",
+        date: "16th Oct,2024  13:00-14:00",
         sportIcon: swimming_icon,
         sportName: "Swimming",
-        userImage: trophy_icon,
+        userImage: m_avatar4,
         userName: "Navjyoth",
         membersJoined: 3,
         totalMembers: 4,
@@ -148,11 +196,11 @@ export const player_list = [
     },
     {
         _id: "6",
-        date: "16th Oct,2024  1:00-2:30",
-        sportIcon: badminton_icon,
-        sportName: "Badminton",
-        userImage: trophy_icon,
-        userName: "Pavan K",
+        date: "16th Oct,2024  13:00-14:30",
+        sportIcon: tennis_icon,
+        sportName: "Tennis",
+        userImage: f_avatar3,
+        userName: "Shreya M",
         membersJoined: 3,
         totalMembers: 4,
         level: "Casual",
@@ -160,10 +208,10 @@ export const player_list = [
     },
     {
         _id: "7",
-        date: "16th Oct,2024  2:00-4:00",
+        date: "16th Oct,2024  14:00-16:00",
         sportIcon: football_icon,
         sportName: "Football",
-        userImage: trophy_icon,
+        userImage: m_avatar1,
         userName: "Vishal J",
         membersJoined: 8,
         totalMembers: 11,
@@ -172,11 +220,11 @@ export const player_list = [
     },
     {
         _id: "8",
-        date: "16th Oct,2024  2:30-4:00",
+        date: "16th Oct,2024  14:30-16:00",
         sportIcon: badminton_icon,
         sportName: "Badminton",
-        userImage: trophy_icon,
-        userName: "Shreya M",
+        userImage: f_avatar4,
+        userName: "Deepika K",
         membersJoined: 2,
         totalMembers: 4,
         level: "Intermediate",
@@ -184,14 +232,387 @@ export const player_list = [
     },
     {
         _id: "9",
-        date: "16th Oct,2024  3:00-4:00",
+        date: "16th Oct,2024  15:00-16:00",
         sportIcon: volleyball_icon,
         sportName: "Volleyball",
-        userImage: trophy_icon,
-        userName: "Samarth G",
+        userImage: f_avatar1,
+        userName: "Prakruti P",
         membersJoined: 4,
         totalMembers: 10,
         level: "Casual",
-        location: "Se,Bengaluru"
+        location: "Seven Switch Sports, ,Bengaluru"
     },
+    {
+        _id: "10",
+        date: "16th Oct,2024  15:00-16:00",
+        sportIcon: chess_icon,
+        sportName: "Chess",
+        userImage: m_avatar4,
+        userName: "Aditya K",
+        membersJoined: 1,
+        totalMembers: 2,
+        level: "Intermediate",
+        location: "BTM Chess Club, BTM 2,Bengaluru"
+    },
+    {
+        _id: "11",
+        date: "16th Oct,2024  16:00-17:00",
+        sportIcon: swimming_icon,
+        sportName: "Swimming",
+        userImage: m_avatar3,
+        userName: "Nikhil R",
+        membersJoined: 2,
+        totalMembers: 4,
+        level: "Professional",
+        location: "Blue Bird Aquatic Centre, Kumarswamy Layout,Bengaluru"
+    },
+    {
+        _id: "12",
+        date: "16th Oct,2024  18:00-19:00",
+        sportIcon: squash_icon,
+        sportName: "Squash",
+        userImage: m_avatar2,
+        userName: "Prakyath P",
+        membersJoined: 3,
+        totalMembers: 4,
+        level: "Casual",
+        location: "The BigBox, Rarajeshwari Nagar,Bengaluru"
+    },
+    {
+        _id: "13",
+        date: "17th Oct,2024  6:00-8:00",
+        sportIcon:  cricket_icon,
+        sportName: "Cricket",
+        userImage: m_avatar5,
+        userName: "Prakash S",
+        membersJoined: 12,
+        totalMembers: 20,
+        level: "Intermediate",
+        location: "Night Warchmen Cricket Ground, Dommasandra, Bengaluru"
+    },
+    {
+        _id: "14",
+        date: "17th Oct,2024  7:00-8:00",
+        sportIcon: hockey_icon,
+        sportName: "Hockey",
+        userImage: m_avatar3,
+        userName: "Pavan K",
+        membersJoined: 5,
+        totalMembers: 10,
+        level: "Professional",
+        location: "Gabriel Sports Club, Hennur Cross,Bengaluru"
+    },
+    {
+        _id: "15",
+        date: "17th Oct,2024  8:00-10:00",
+        sportIcon: basketball_icon,
+        sportName: "Basketball",
+        userImage: f_avatar2,
+        userName: "Risha",
+        membersJoined: 5,
+        totalMembers: 15,
+        level: "Casual",
+        location: "Play Arena, Sarjapur Road,Bengaluru"
+    },
+    {
+        _id: "16",
+        date: "17th Oct,2024  8:00-10:00",
+        sportIcon: chess_icon,
+        sportName: "Chess",
+        userImage: m_avatar1,
+        userName: "Samarth G",
+        membersJoined: 1,
+        totalMembers: 2,
+        level: "Intermediate",
+        location: "Grovies Sports Bistro, Niranthara Layout,Bengaluru"
+    },
+    {
+        _id: "17",
+        date: "17th Oct,2024  10:00-12:00",
+        sportIcon: hockey_icon,
+        sportName: "Hockey",
+        userImage: m_avatar2,
+        userName: "Namith U",
+        membersJoined: 8,
+        totalMembers: 15,
+        level: "Professional",
+        location: "Bull Ring Arena, Indiranagar,Bengaluru"
+    },
+    {
+        _id: "18",
+        date: "17th Oct,2024  12:00-13:30",
+        sportIcon: tennis_icon,
+        sportName: "Tennis",
+        userImage: f_avatar5,
+        userName: "Manasi P",
+        membersJoined: 1,
+        totalMembers: 4,
+        level: "Casual",
+        location: "Game Theory, Indiranagar,Bengaluru"
+    },
+    {
+        _id: "19",
+        date: "17th Oct,2024  12:00-14:00",
+        sportIcon: volleyball_icon,
+        sportName: "Volleyball",
+        userImage: m_avatar4,
+        userName: "Manu P",
+        membersJoined: 4,
+        totalMembers: 10,
+        level: "Casual",
+        location: "Ekam Sports, Marathahalli,Bengaluru"
+    },
+    {
+        _id: "20",
+        date: "17th Oct,2024  13:00-14:00",
+        sportIcon: squash_icon,
+        sportName: "Squash",
+        userImage: f_avatar5,
+        userName: "Anagha R",
+        membersJoined: 3,
+        totalMembers: 4,
+        level: "Professional",
+        location: "Fitness Cafe, Koramangala,Bengaluru"
+    },
+    {
+        _id: "21",
+        date: "17th Oct,2024  14:00-15:30",
+        sportIcon: cricket_icon,
+        sportName: "Cricket",
+        userImage: m_avatar5,
+        userName: "Shrivardhan S",
+        membersJoined: 9,
+        totalMembers: 22,
+        level: "Casual",
+        location: "TSG Sports Arena, Uttarahalli,Bengaluru"
+    },
+    {
+        _id: "22",
+        date: "17th Oct,2024  14:00-15:30",
+        sportIcon: swimming_icon,
+        sportName: "Swimming",
+        userImage: m_avatar1,
+        userName: "Chandan A",
+        membersJoined: 3,
+        totalMembers: 5,
+        level: "Intermediate",
+        location: "Endless Pool Fitness Centre, Mathikere,Bengaluru"
+    },
+    {
+        _id: "23",
+        date: "17th Oct,2024  16:00-18:00",
+        sportIcon: volleyball_icon,
+        sportName: "Volleyball",
+        userImage: m_avatar3,
+        userName: "Aprameya",
+        membersJoined: 3,
+        totalMembers: 10,
+        level: "Intermediate",
+        location: "Loop Sportsplex, Mahadevpura,Bengaluru"
+    },
+    {
+        _id: "24",
+        date: "17th Oct,2024  17:00-18:00",
+        sportIcon: squash_icon,
+        sportName: "Squash",
+        userImage: m_avatar2,
+        userName: "Manoj N",
+        membersJoined: 2,
+        totalMembers: 4,
+        level: "Intermediate",
+        location: "Spartan Arena, Rajajinagar, Bengaluru"
+    },
+    {
+        _id: "25",
+        date: "17th Oct,2024  17:00-19:00",
+        sportIcon: football_icon,
+        sportName: "Football",
+        userImage: f_avatar5,
+        userName: "Shruthi T",
+        membersJoined: 9,
+        totalMembers: 11,
+        level: "Casual",
+        location: "Kixx Turf, Jayanagar, Bengaluru"
+    },
+    {
+        _id: "26",
+        date: "17th Oct,2024  18:00-19:00",
+        sportIcon: badminton_icon,
+        sportName: "Badminton",
+        userImage: f_avatar3,
+        userName: "Ankita D",
+        membersJoined: 2,
+        totalMembers: 4,
+        level: "Professional",
+        location: "Feather Pro Court, Malleswaram, Bengaluru"
+    },
+    {
+        _id: "27",
+        date: "17th Oct,2024  18:00-19:30",
+        sportIcon: volleyball_icon,
+        sportName: "Volleyball",
+        userImage: m_avatar4,
+        userName: "Anirudh H",
+        membersJoined: 5,
+        totalMembers: 10,
+        level: "Casual",
+        location: "Breeze Sports Hub, Whitefield, Bengaluru"
+    },
+    {
+        _id: "28",
+        date: "18th Oct,2024  7:00-8:00",
+        sportIcon: tennis_icon,
+        sportName: "Tennis",
+        userImage: m_avatar1,
+        userName: "Sanath P",
+        membersJoined: 2,
+        totalMembers: 4,
+
+        level: "Intermediate",
+        location: "Court Slam, JP Nagar, Bengaluru"
+    },
+    {
+        _id: "29",
+        date: "18th Oct,2024  8:00-9:00",
+        sportIcon: swimming_icon,
+        sportName: "Swimming",
+        userImage: f_avatar4,
+        userName: "Shreya R",
+        membersJoined: 3,
+        totalMembers: 4,
+        level: "Intermediate",
+        location: "AquaFit Arena, JP Nagar, Bengaluru"
+    },
+    {
+        _id: "30",
+        date: "18th Oct,2024  9:00-10:00",
+        sportIcon: badminton_icon,
+        sportName: "Badminton",
+        userImage: f_avatar3,
+        userName: "Ananya V",
+        membersJoined: 1,
+        totalMembers: 4,
+        level: "Casual",
+        location: "Smash Zone, Koramangala, Bengaluru"
+    },
+    {
+        _id: "31",
+        date: "17th Oct,2024  9:00-10:00",
+        sportIcon: tabletennis_icon,
+        sportName: "Table Tennis",
+        userImage: m_avatar2,
+        userName: "Raghav P",
+        membersJoined: 2,
+        totalMembers: 4,
+        level: "Professional",
+        location: "Ping Pong Club, Jayanagar, Bengaluru"
+    },
+    {
+        _id: "32",
+        date: "18th Oct,2024  10:00-11:00",
+        sportIcon: volleyball_icon,
+        sportName: "Volleyball",
+        userImage: f_avatar5,
+        userName: "Meghana S",
+        membersJoined: 6,
+        totalMembers: 10,
+        level: "Intermediate",
+        location: "Volley Zone, Indiranagar, Bengaluru"
+    },
+    {
+        _id: "33",
+        date: "18th Oct,2024  11:00-12:00",
+        sportIcon: swimming_icon,
+        sportName: "Swimming",
+        userImage: m_avatar1,
+        userName: "Aryan B",
+        membersJoined: 2,
+        totalMembers: 4,
+        level: "Casual",
+        location: "Blue Wave Club, Banashankari, Bengaluru"
+    },
+    {
+        _id: "34",
+        date: "18th Oct,2024  12:00-14:00",
+        sportIcon: cricket_icon,
+        sportName: "Cricket",
+        userImage: m_avatar4,
+        userName: "Shreyas V",
+        membersJoined: 9,
+        totalMembers: 22,
+        level: "Intermediate",
+        location: "Max Turf, HSR Layout, Bengaluru"
+    },
+    {
+        _id: "35",
+        date: "18th Oct,2024  14:00-15:30",
+        sportIcon: volleyball_icon,
+        sportName: "Volleyball",
+        userImage: m_avatar5,
+        userName: "Harish A",
+        membersJoined: 5,
+        totalMembers: 10,
+        level: "Professional",
+        location: "Ace Sports Club, Frazer Town, Bengaluru"
+    },
+    {
+        _id: "36",
+        date: "16th Oct,2024  16:00-17:00",
+        sportIcon: tabletennis_icon,
+        sportName: "Table Tennis",
+        userImage: f_avatar1,
+        userName: "Priya G",
+        membersJoined: 2,
+        totalMembers: 4,
+        level: "Casual",
+        location: "Spin Arena, Whitefield, Bengaluru"
+    },
+    {
+        _id: "37",
+        date: "19th Oct,2024  8:00-10:00",
+        sportIcon: basketball_icon,
+        sportName: "Basketball",
+        userImage: m_avatar4,
+        userName: "Varun T",
+        membersJoined: 6,
+        totalMembers: 15,
+        level: "Intermediate",
+        location: "Hoop House, Electronic City, Bengaluru"
+    },
+    {
+        _id: "38",
+        date: "19th Oct,2024  9:00-10:30",
+        sportIcon: badminton_icon,
+        sportName: "Badminton",
+        userImage: f_avatar1,
+        userName: "Soumya K",
+        membersJoined: 2,
+        totalMembers: 4,
+        level: "Professional",
+        location: "Racquet Zone, Hennur, Bengaluru"
+    },
+    {
+        _id: "39",
+        date: "19th Oct,2024  10:00-11:00",
+        sportIcon: squash_icon,
+        sportName: "Squash",
+        userImage: m_avatar5,
+        userName: "Tarakeshwar K",
+        membersJoined: 3,
+        totalMembers: 4,
+        level: "Casual",
+        location: "ProFit Arena, Uttarahalli, Bengaluru"
+    },
+    {
+        _id: "40",
+        date: "19th Oct,2024  11:00-13:00",
+        sportIcon: football_icon,
+        sportName: "Football",
+        userImage: f_avatar3,
+        userName: "Nishmitha S",
+        membersJoined: 10,
+        totalMembers: 11,
+        level: "Intermediate",
+        location: "Sprint Field, RT Nagar, Bengaluru"
+    }    
 ]

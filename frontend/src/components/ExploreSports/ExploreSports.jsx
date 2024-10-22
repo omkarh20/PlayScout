@@ -1,24 +1,12 @@
 import React, { useContext } from 'react';
 import './ExploreSports.css';
 import '../../assets/assets'
-import { assets } from '../../assets/assets';
+import { assets, scroll } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
 
 const ExploreSports = () => {
-  const scrollLeft = () => {
-    document.querySelector('.explore-sports-list').scrollBy({
-      left: -300,
-      behavior: 'smooth'
-    });
-  };
-
-  const scrollRight = () => {
-    document.querySelector('.explore-sports-list').scrollBy({
-      left: 300, 
-      behavior: 'smooth'
-    });
-  };
-
+  const scrollLeftSports = () => scroll('explore-sports-list', -300);
+  const scrollRightSports = () => scroll('explore-sports-list', 300);
 
   const {sport_list} = useContext(StoreContext)
 
@@ -27,7 +15,7 @@ const ExploreSports = () => {
       <div className="explore-sports">
         <h1>Explore Sports</h1>
         <div className="explore-sports-container">
-          <img className="scroll-icon left-icon" src={assets.leftIcon} alt="Scroll Left" onClick={scrollLeft} />
+          <img className="scroll-icon left-icon" src={assets.leftIcon} alt="Scroll Left" onClick={scrollLeftSports} />
           <div className="explore-sports-list">
             {sport_list.map((item, index) => {
               return (
@@ -38,7 +26,7 @@ const ExploreSports = () => {
               );
             })}
           </div>
-          <img className="scroll-icon right-icon" src={assets.rightIcon} alt="Scroll Right" onClick={scrollRight} />
+          <img className="scroll-icon right-icon" src={assets.rightIcon} alt="Scroll Right" onClick={scrollRightSports} />
         </div>
       </div>
     </div>

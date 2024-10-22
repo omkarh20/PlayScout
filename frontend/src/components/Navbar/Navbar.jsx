@@ -1,21 +1,22 @@
-import React, {useState} from 'react'
+import React, {useContext} from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
 import { Link } from 'react-router-dom';
+import { StoreContext } from '../../context/StoreContext';
 
 const Navbar = ({setShowLogin}) => {
 
-  const [menu,setMenu] = useState("home");
+  const { menu, setMenu } = useContext(StoreContext)
 
   return (
     <div className='navbar'>
       <img src={assets.logo} alt="" className='logo' />
       <ul className="navbar-menu">
-        <Link to='./'><li onClick={()=>setMenu("home")} className={menu==="home"?"active":""}>Home</li></Link>
-        <li onClick={()=>setMenu("book")} className={menu==="book"?"active":""}>Book</li>
-        <Link to='./meet'><li onClick={()=>setMenu("meet")} className={menu==="meet"?"active":""}>Meet</li></Link>
-        <li onClick={()=>setMenu("chat")} className={menu==="chat"?"active":""}>Chat</li>
-        <li onClick={()=>setMenu("news")} className={menu==="news"?"active":""}>News</li>
+      <Link to='/' onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}><li>Home</li></Link>
+      <Link to='/book' onClick={() => setMenu("book")} className={menu === "book" ? "active" : ""}><li>Book</li></Link>
+      <Link to='/meet' onClick={() => setMenu("meet")} className={menu === "meet" ? "active" : ""}><li>Meet</li></Link>
+      <Link to='/chat' onClick={() => setMenu("chat")} className={menu === "chat" ? "active" : ""}><li>Chat</li></Link>
+      <Link to='/news' onClick={() => setMenu("news")} className={menu === "news" ? "active" : ""}><li>News</li></Link>
       </ul>
       <div className="navbar-right">
         <img src={assets.profile_icon} alt="" className='profile_icon' />

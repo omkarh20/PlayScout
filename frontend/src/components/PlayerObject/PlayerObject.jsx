@@ -2,8 +2,9 @@ import React from 'react';
 import './PlayerObject.css';
 import { assets } from '../../assets/assets';
 
-const PlayObject = ({ id, date, sportIcon, sportName, userImage, userName, membersJoined, totalMembers, level, location }) => {
+const PlayObject = ({ id, className,date, sportIcon, sportName, userImage, userName, membersJoined, totalMembers, level, location }) => {
   return (
+  <div className={`player-object ${className}`}>
     <div className="player-component">
       <div className="player-header">
         <p><img src={assets.calendar_icon} alt="calendar-icon" className="player-calendar-icon" /> {date}</p>
@@ -30,6 +31,7 @@ const PlayObject = ({ id, date, sportIcon, sportName, userImage, userName, membe
         <button className="chat-button">Chat</button>
       </div>
     </div>
+  </div>
   );
 }
 

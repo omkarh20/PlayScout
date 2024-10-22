@@ -25,10 +25,10 @@ const MeetHeader = () => {
                 <img src={assets.filter_icon} alt="" className='menu-bar-icons' />
                 <span>Filter</span>
             </button>
-            <button className="create-game-btn">
+            {/*<button className="create-game-btn">
                 <img src={assets.pencil_icon} alt="" />
                 <span>Create Game</span>
-            </button>
+            </button>*/}
         </div>
     </div>
   )

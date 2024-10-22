@@ -10,6 +10,21 @@ import squash from './squash.jpg'
 import tabletennis from './tabletennis.jpg'
 import swimming from './swimming.jpg'
 import tennis from './tennis.jpg'
+import bcourt1 from './bcourt1.png'
+import bcourt2 from './bcourt2.png'
+import bcourt3 from './bcourt3.png'
+import bcourt4 from './bcourt4.png'
+import bcourt5 from './bcourt5.png'
+import ccourt1 from './ccourt1.png'
+import ccourt2 from './ccourt2.png'
+import ccourt3 from './ccourt3.png'
+import vcourt1 from './vcourt1.png'
+import vcourt2 from './vcourt2.png'
+import vcourt3 from './vcourt3.png'
+import tcourt1 from './tcourt1.png'
+import tcourt2 from './tcourt2.png'
+import tcourt3 from './tcourt3.png'
+
 import facebook_icon from './facebook_icon.png'
 import twitter_icon from './twitter_icon.png'
 import linkedin_icon from './linkedin_icon.png'
@@ -615,4 +630,137 @@ export const player_list = [
         level: "Intermediate",
         location: "Sprint Field, RT Nagar, Bengaluru"
     }    
-]
+];
+export const COURT_list = [
+    {
+        _id: "court_badminton_1",
+        courtName: "Sky Smash Arena",
+        sport: "Badminton",
+        courtLocation: "Koramangala, Bengaluru",
+        courtsAvailable: 3,
+        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        courtImage: bcourt1,
+        game_icon: badminton_icon // Added game icon
+    },
+    {
+        _id: "court_badminton_5",
+        courtName: "Racquet Paradise",
+        sport: "Badminton",
+        courtLocation: "Indiranagar, Bengaluru",
+        courtsAvailable: 2,
+        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        courtImage: bcourt5,
+        game_icon: badminton_icon // Added game icon
+    },
+    {
+        _id: "court_badminton_2",
+        courtName: "Feather Flight",
+        sport: "Badminton",
+        courtLocation: "Jayanagar, Bengaluru",
+        courtsAvailable: 4,
+        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        courtImage: bcourt2,
+        game_icon: badminton_icon // Added game icon
+    },
+    {
+        _id: "court_badminton_4",
+        courtName: "Net Masters",
+        sport: "Badminton",
+        courtLocation: "Whitefield, Bengaluru",
+        courtsAvailable: 1,
+        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        courtImage: bcourt4,
+        game_icon: badminton_icon // Added game icon
+    },
+    {
+        _id: "court_badminton_3",
+        courtName: "Victory Court",
+        sport: "Badminton",
+        courtLocation: "MG Road, Bengaluru",
+        courtsAvailable: 5,
+        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        courtImage: bcourt3,
+        game_icon: badminton_icon // Added game icon
+    },
+    {
+        _id: "court_cricket_1",
+        courtName: "Cricket Central",
+        sport: "Cricket",
+        courtLocation: "HSR Layout, Bengaluru",
+        courtsAvailable: 2,
+        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        courtImage: ccourt1,
+        game_icon: cricket_icon // Added game icon
+    },
+    {
+        _id: "court_cricket_2",
+        courtName: "Boundary Line",
+        sport: "Cricket",
+        courtLocation: "Kalyan Nagar, Bengaluru",
+        courtsAvailable: 3,
+        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        courtImage: ccourt2,
+        game_icon: cricket_icon // Added game icon
+    },
+    {
+        _id: "court_cricket_3",
+        courtName: "Pitch Perfect",
+        sport: "Cricket",
+        courtLocation: "Basavanagudi, Bengaluru",
+        courtsAvailable: 4,
+        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        courtImage: ccourt3,
+        game_icon: cricket_icon // Added game icon
+    },
+    {
+        _id: "court_volleyball_1",
+        courtName: "Spike Zone",
+        sport: "Volleyball",
+        courtLocation: "Koramangala, Bengaluru",
+        courtsAvailable: 2,
+        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        courtImage: vcourt1,
+        game_icon: volleyball_icon // Added game icon
+    },
+    {
+        _id: "court_volleyball_2",
+        courtName: "Net Warriors",
+        sport: "Volleyball",
+        courtLocation: "Indiranagar, Bengaluru",
+        courtsAvailable: 3,
+        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        courtImage: vcourt2,
+        game_icon: volleyball_icon // Added game icon
+    },
+    {
+        _id: "court_volleyball_3",
+        courtName: "Beach Vibes",
+        sport: "Volleyball",
+        courtLocation: "Jayanagar, Bengaluru",
+        courtsAvailable: 4,
+        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        courtImage: vcourt3,
+        game_icon: volleyball_icon // Added game icon
+    },
+    {
+        _id: "court_tabletennis_1",
+        courtName: "Spin City",
+        sport: "Table Tennis",
+        courtLocation: "Whitefield, Bengaluru",
+        courtsAvailable: 1,
+        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        courtImage: tcourt1,
+        game_icon: tabletennis_icon // Added game icon
+    },
+    {
+        _id: "court_tabletennis_2",
+        courtName: "Table Tango",
+        sport: "Table Tennis",
+        courtLocation: "MG Road, Bengaluru",
+        courtsAvailable: 5,
+        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        courtImage: tcourt2,
+        game_icon: tabletennis_icon // Added game icon
+    },
+    // Add additional courts as needed with their respective icons
+];

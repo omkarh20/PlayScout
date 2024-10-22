@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { sport_list,player_list } from "../assets/assets";
+import { sport_list,player_list, COURT_list } from "../assets/assets";
 
 export const StoreContext = createContext(null)
 
@@ -10,6 +10,7 @@ const StoreContextProvider = (props) => {
         sport_list,
         player_list,
         menu,
+        COURT_list,
         setMenu
     }
     

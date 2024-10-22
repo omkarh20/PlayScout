@@ -5,6 +5,7 @@ import Home from './pages/Home/Home'
 import Meet from './pages/Meet/Meet'
 import Footer from './components/Footer/Footer'
 import LoginPopup from './components/LoginPopup/LoginPopup'
+import Booking from './pages/Booking/Booking'
 
 const App = () => {
 
@@ -17,7 +18,9 @@ const App = () => {
         <Navbar setShowLogin = {setShowLogin} />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/book' element={<Booking/>}/>
           <Route path='/meet' element={<Meet />} />
+
         </Routes>
       </div>
       <Footer />

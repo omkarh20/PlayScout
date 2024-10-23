@@ -1,0 +1,62 @@
+.book-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .book-popup-container {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    position: relative;
+  }
+  
+  .book-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .book-popup-header h2 {
+    margin: 0;
+  }
+  
+  .book-popup-content {
+    margin-top: 20px;
+  }
+  
+  .book-popup-info {
+    text-align: center;
+  }
+  
+  .sport-name {
+    font-weight: bold;
+  }
+  
+  .court-location,
+  .court-price {
+    margin: 5px 0;
+  }
+  
+  .book-popup-actions {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .confirm-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

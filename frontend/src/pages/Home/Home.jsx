@@ -6,7 +6,7 @@ import ExplorePlayers from '../../components/ExplorePlayers/ExplorePlayers'
 
 const Home = () => {
   return (
-    <div>
+    <div className='home'>
       <Header />
       <ExploreSports />
       <ExplorePlayers />

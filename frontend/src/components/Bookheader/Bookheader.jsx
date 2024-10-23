@@ -15,11 +15,10 @@ const Bookheader = () => {
         </div>
         <div className="book-bar">
            <Location/>
-          
            <Sports/>
         </div>
         <br/>
-        <div className="line"></div>
+        <div className="book-line"></div>
     </div>
   );
 };

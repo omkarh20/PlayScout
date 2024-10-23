@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import { assets } from '../../assets/assets';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
           <h2>Company</h2>
           <ul>
             <li>About Us</li>
-            <li>Privacy Policy</li>
+            <Link to='privacy-policy'><li>Privacy Policy</li></Link>
             <li>Contact Us</li>
             <li className='contact'>+91-9456327543</li>
             <li className='contact'>contact@playscout.com</li>

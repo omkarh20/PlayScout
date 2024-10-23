@@ -1,12 +1,26 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 
 const Navbar = ({setShowLogin}) => {
 
   const { menu, setMenu } = useContext(StoreContext)
+  const location = useLocation();
+
+  useEffect(() => {
+    const currentPath = location.pathname;
+    if (currentPath === '/') {
+      setMenu('home');
+    } else if (currentPath === '/meet') {
+      setMenu('meet');
+    } else if (currentPath === '/privacy-policy') {
+      setMenu('privacy-policy');
+    } else {
+      setMenu('');
+    }
+  }, [location.pathname]);
 
   return (
     <div className='navbar'>

@@ -27,6 +27,7 @@ const MeetHeader = () => {
             </button>
            
         </div>
+        <div className="meet-line"></div>
     </div>
   )
 }

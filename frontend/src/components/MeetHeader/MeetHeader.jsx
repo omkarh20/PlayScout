@@ -30,6 +30,7 @@ const MeetHeader = () => {
                 <span>Create Game</span>
             </button>*/}
         </div>
+        <div className="meet-line"></div>
     </div>
   )
 }

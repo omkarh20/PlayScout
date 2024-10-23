@@ -31,7 +31,7 @@ const Bookheader = () => {
             </button>
           
         </div><br/>
-          <div className="line"></div>
+          <div className="book-line"></div>
     </div>
   );
 };

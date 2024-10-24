@@ -49,17 +49,17 @@
     padding-top: 2px;
   }
   
-  .meet-bar .location-btn {
+  .meet-bar .location-btn-book {
     background-color: #ffecc7;
     border: 1px solid #cb3c0c;
   }
   
-  .meet-bar .date-btn {
+  .meet-bar .date-btn-book {
     background-color: #f0f9ff;
     border: 1px solid #0099cc;
   }
   
-  .meet-bar .sports-btn {
+  .meet-bar .sports-btn-book {
     background-color: #e4f7e6;
     border: 1px solid #4caf50;
   }

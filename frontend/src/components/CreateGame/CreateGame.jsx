@@ -37,7 +37,7 @@ const CreateGame = () => {
                 <input type="number" min="1" max="20" />
               </div>
 
-              <button type="submit">Create</button>
+              <button type="submit" className='create-btn-submit'>Create</button>
             </form>
           </div>
         </div>

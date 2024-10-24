@@ -23,8 +23,8 @@
     margin-bottom: 15px;
   }
   
-  form input,
-  form select {
+  .create-game-form form input,
+  .create-game-form form select {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -32,7 +32,7 @@
     border: 1px solid #ccc;
   }
   
-  button {
+  .create-btn-submit {
     padding: 10px 20px;
     background-color: #28a745;
     color: white;

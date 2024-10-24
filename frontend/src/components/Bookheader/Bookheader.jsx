@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Bookheader.css';
 import { assets } from '../../assets/assets';
-import Location from '../Location/location';
+import Location from '../Location/Location';
 import Sports from '../Sport/Sport';
 import BookDisplay from '../Bookingdisplay/Bookdisplay';
 

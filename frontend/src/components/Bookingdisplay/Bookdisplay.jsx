@@ -1,19 +1,28 @@
-import React, { useContext } from 'react'; 
+import React, { useContext } from 'react';
 import './Bookdisplay.css'; 
 import { StoreContext } from '../../context/StoreContext';
 import Bookvenue from '../Bookvenue/Bookvenue'; 
 
-const BookingDisplay = ({ category }) => {
+const BookDisplay = ({ selectedSport, selectedLocation }) => {
   const { COURT_list } = useContext(StoreContext);
 
-  if (!COURT_list || COURT_list.length === 0) {
+  // Filter courts based on selected sport and location
+  const filteredCourts = COURT_list.filter((item) => {
+    const sportMatch = selectedSport === 'Select Sport' || item.sport === selectedSport;
+    const locationMatch = selectedLocation === 'Select Location' || item.courtLocation === selectedLocation;
+
+    return sportMatch && locationMatch;
+  });
+
+  // If no courts match the criteria, return a message
+  if (filteredCourts.length === 0) {
     return <div>No courts available for this category.</div>;
   }
 
   return (
     <div className='booking-display'>
       <div className="booking-display-list">
-        {COURT_list.map((item) => (
+        {filteredCourts.map((item) => (
           <Bookvenue 
             key={item._id} 
             className='booking-display-list-item'
@@ -31,4 +40,4 @@ const BookingDisplay = ({ category }) => {
   );
 }
 
-export default BookingDisplay;
+export default BookDisplay;

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './Location.css';
 import { assets } from '../../assets/assets';
 
-const Location = () => {
+const Location = ({ setSelectedLocation }) => { // Accept setSelectedLocation prop
   const [showDropdown, setShowDropdown] = useState(false);
-  const [selectedLocation, setSelectedLocation] = useState('Select Location');
+  const [selectedLocation, setSelectedLocationLocal] = useState('Select Location');
 
   const locations = [
     'Koramangala, Bengaluru',
@@ -44,7 +44,8 @@ const Location = () => {
   };
 
   const handleLocationSelect = (location) => {
-    setSelectedLocation(location);
+    setSelectedLocationLocal(location);
+    setSelectedLocation(location); // Update parent state
     setShowDropdown(false);
   };
 

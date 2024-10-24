@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Bookpop.css'; 
 import { assets } from '../../assets/assets'; 
 import Date from '../Date/Date';
-i// Import the Date component
+// Import the Date component
 
 const Bookpop = ({ setShowBooking, courtDetails }) => {
   const { courtName, courtLocation, price, game_icon, sport } = courtDetails;

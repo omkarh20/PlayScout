@@ -111,24 +111,24 @@ export const scroll = (className, scrollAmount) => {
 
 export const sport_list = [
     {
-        sport_name: "Basketball",
-        sport_image: basketball
+        sport_name: "Badminton",
+        sport_image: badminton
     },
     {
         sport_name: "Cricket",
         sport_image: cricket
     },
     {
-        sport_name: "Football",
-        sport_image: football
-    },
-    {
-        sport_name: "Badminton",
-        sport_image: badminton
-    },
-    {
         sport_name: "Volleyball",
         sport_image: volleyball
+    },
+    {
+        sport_name: "Basketball",
+        sport_image: basketball
+    },
+    {
+        sport_name: "Football",
+        sport_image: football
     },
     {
         sport_name: "Squash",

@@ -13,8 +13,14 @@ const Navbar = ({setShowLogin}) => {
     const currentPath = location.pathname;
     if (currentPath === '/') {
       setMenu('home');
+    } else if (currentPath === '/book') {
+      setMenu('book');
     } else if (currentPath === '/meet') {
       setMenu('meet');
+    } else if (currentPath === '/chat') {
+      setMenu('chat');
+    } else if (currentPath === '/news') {
+      setMenu('news');
     } else if (currentPath === '/privacy-policy') {
       setMenu('privacy-policy');
     } else {

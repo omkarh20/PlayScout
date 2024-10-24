@@ -1,8 +1,7 @@
 import React from 'react';
 import './Bookheader.css';
 import { assets } from '../../assets/assets';
-import Location from '../Location/location';
-import Date from '../Date/Date';
+import Location from '../Location/Location';
 import Sports from '../Sport/Sport';
        // Import Sports component
 

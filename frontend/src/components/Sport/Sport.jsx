@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './Sport.css';
 import { assets } from '../../assets/assets';
 
-const Sports = () => {
+const Sports = ({ setSelectedSport }) => { // Accept setSelectedSport prop
   const [showDropdown, setShowDropdown] = useState(false);
-  const [selectedSport, setSelectedSport] = useState('Select Sport');
+  const [selectedSport, setSelectedSportLocal] = useState('Select Sport');
 
   const sports = [
     'Badminton',
@@ -27,7 +27,8 @@ const Sports = () => {
   };
 
   const handleSportSelect = (sport) => {
-    setSelectedSport(sport);
+    setSelectedSportLocal(sport);
+    setSelectedSport(sport); // Update parent state
     setShowDropdown(false);
   };
 

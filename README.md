@@ -14,7 +14,7 @@
 
 ## Preview
 
-![PlayScout Homepage](assets/screenshot.png)
+![PlayScout Homepage](assets/homepage_screenshot.png)
 
 ## Tech Stack
 

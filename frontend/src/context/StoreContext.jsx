@@ -5,13 +5,16 @@ export const StoreContext = createContext(null)
 
 const StoreContextProvider = (props) => {
     const [menu,setMenu] = useState("home");
+    const [selectedSport, setSelectedSport] = useState('Select Sport');
 
     const contextValue = {
         sport_list,
         player_list,
         menu,
+        setMenu,
+        selectedSport,
+        setSelectedSport,
         COURT_list,
-        setMenu
     }
     
     return (

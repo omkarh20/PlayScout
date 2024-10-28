@@ -7,6 +7,7 @@ const Location = ({ setSelectedLocation }) => { // Accept setSelectedLocation pr
   const [selectedLocation, setSelectedLocationLocal] = useState('Select Location');
 
   const locations = [
+    'All',
     'Koramangala, Bengaluru',
     'Indiranagar, Bengaluru',
     'Whitefield, Bengaluru',

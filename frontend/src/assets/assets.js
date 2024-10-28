@@ -640,16 +640,18 @@ export const player_list = [
         level: "Intermediate",
         location: "Sprint Field, RT Nagar, Bengaluru"
     }    
-];export const COURT_list = [
+];
+
+export const COURT_list = [
     {
         _id: "court_cricket_3",
         courtName: "Pitch Perfect",
         sport: "Cricket",
         courtLocation: "Basavanagudi, Bengaluru",
         courtsAvailable: 4,
-        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        price: 1000,
         courtImage: ccourt3,
-        game_icon: cricket_icon // Added game icon
+        game_icon: cricket_icon
     },
     {
         _id: "court_badminton_5",
@@ -657,9 +659,9 @@ export const player_list = [
         sport: "Badminton",
         courtLocation: "Indiranagar, Bengaluru",
         courtsAvailable: 2,
-        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        price: 250,
         courtImage: bcourt5,
-        game_icon: badminton_icon // Added game icon
+        game_icon: badminton_icon
     },
     {
         _id: "court_tabletennis_1",
@@ -667,9 +669,9 @@ export const player_list = [
         sport: "Table Tennis",
         courtLocation: "Whitefield, Bengaluru",
         courtsAvailable: 1,
-        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        price: 200,
         courtImage: tcourt1,
-        game_icon: tabletennis_icon // Added game icon
+        game_icon: tabletennis_icon
     },
     {
         _id: "court_volleyball_1",
@@ -677,9 +679,9 @@ export const player_list = [
         sport: "Volleyball",
         courtLocation: "Koramangala, Bengaluru",
         courtsAvailable: 2,
-        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        price: 220,
         courtImage: vcourt1,
-        game_icon: volleyball_icon // Added game icon
+        game_icon: volleyball_icon
     },
     {
         _id: "court_badminton_1",
@@ -687,9 +689,9 @@ export const player_list = [
         sport: "Badminton",
         courtLocation: "Koramangala, Bengaluru",
         courtsAvailable: 3,
-        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        price: 200,
         courtImage: bcourt1,
-        game_icon: badminton_icon // Added game icon
+        game_icon: badminton_icon
     },
     {
         _id: "court_tabletennis_2",
@@ -697,9 +699,9 @@ export const player_list = [
         sport: "Table Tennis",
         courtLocation: "MG Road, Bengaluru",
         courtsAvailable: 5,
-        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        price: 175,
         courtImage: tcourt2,
-        game_icon: tabletennis_icon // Added game icon
+        game_icon: tabletennis_icon
     },
     {
         _id: "court_volleyball_2",
@@ -707,9 +709,9 @@ export const player_list = [
         sport: "Volleyball",
         courtLocation: "Indiranagar, Bengaluru",
         courtsAvailable: 3,
-        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        price: 250,
         courtImage: vcourt2,
-        game_icon: volleyball_icon // Added game icon
+        game_icon: volleyball_icon
     },
     {
         _id: "court_badminton_3",
@@ -717,9 +719,9 @@ export const player_list = [
         sport: "Badminton",
         courtLocation: "MG Road, Bengaluru",
         courtsAvailable: 5,
-        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        price: 230,
         courtImage: bcourt3,
-        game_icon: badminton_icon // Added game icon
+        game_icon: badminton_icon
     },
     {
         _id: "pool_swimming_1",
@@ -727,9 +729,9 @@ export const player_list = [
         sport: "Swimming",
         courtLocation: "Indiranagar, Bengaluru",
         courtsAvailable: 3,
-        price: Math.floor(Math.random() * (500 - 300 + 1)) + 300,
+        price: 450,
         courtImage: scourt1,
-        game_icon: swimming_icon // Added game icon
+        game_icon: swimming_icon
     },
     {
         _id: "court_volleyball_3",
@@ -737,9 +739,9 @@ export const player_list = [
         sport: "Volleyball",
         courtLocation: "Jayanagar, Bengaluru",
         courtsAvailable: 4,
-        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        price: 280,
         courtImage: vcourt3,
-        game_icon: volleyball_icon // Added game icon
+        game_icon: volleyball_icon
     },
     {
         _id: "court_badminton_4",
@@ -747,9 +749,9 @@ export const player_list = [
         sport: "Badminton",
         courtLocation: "Whitefield, Bengaluru",
         courtsAvailable: 1,
-        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        price: 240,
         courtImage: bcourt4,
-        game_icon: badminton_icon // Added game icon
+        game_icon: badminton_icon
     },
     {
         _id: "court_cricket_1",
@@ -757,9 +759,9 @@ export const player_list = [
         sport: "Cricket",
         courtLocation: "HSR Layout, Bengaluru",
         courtsAvailable: 2,
-        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        price: 1200,
         courtImage: ccourt1,
-        game_icon: cricket_icon // Added game icon
+        game_icon: cricket_icon
     },
     {
         _id: "court_badminton_2",
@@ -767,9 +769,9 @@ export const player_list = [
         sport: "Badminton",
         courtLocation: "Jayanagar, Bengaluru",
         courtsAvailable: 4,
-        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        price: 220,
         courtImage: bcourt2,
-        game_icon: badminton_icon // Added game icon
+        game_icon: badminton_icon
     },
     {
         _id: "pool_swimming_2",
@@ -777,9 +779,9 @@ export const player_list = [
         sport: "Swimming",
         courtLocation: "Koramangala, Bengaluru",
         courtsAvailable: 5,
-        price: Math.floor(Math.random() * (450 - 350 + 1)) + 350,
+        price: 500,
         courtImage: scourt2,
-        game_icon: swimming_icon // Added game icon
+        game_icon: swimming_icon
     },
     {
         _id: "court_cricket_2",
@@ -787,9 +789,9 @@ export const player_list = [
         sport: "Cricket",
         courtLocation: "Kalyan Nagar, Bengaluru",
         courtsAvailable: 3,
-        price: Math.floor(Math.random() * (300 - 200 + 1)) + 200,
+        price: 1100,
         courtImage: ccourt2,
-        game_icon: cricket_icon // Added game icon
+        game_icon: cricket_icon
     },
     {
         _id: "pool_swimming_4",
@@ -797,9 +799,9 @@ export const player_list = [
         sport: "Swimming",
         courtLocation: "Malleswaram, Bengaluru",
         courtsAvailable: 4,
-        price: Math.floor(Math.random() * (500 - 350 + 1)) + 350,
+        price: 600,
         courtImage: scourt4,
-        game_icon: swimming_icon // Added game icon
+        game_icon: swimming_icon
     },
     {
         _id: "pool_swimming_3",
@@ -807,8 +809,8 @@ export const player_list = [
         sport: "Swimming",
         courtLocation: "Whitefield, Bengaluru",
         courtsAvailable: 2,
-        price: Math.floor(Math.random() * (400 - 250 + 1)) + 250,
+        price: 400,
         courtImage: scourt3,
-        game_icon: swimming_icon // Added game icon
+        game_icon: swimming_icon
     }
 ];

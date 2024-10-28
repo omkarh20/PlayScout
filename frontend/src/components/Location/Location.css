@@ -22,7 +22,7 @@
     position: absolute;
     top: 100%; /* Position the dropdown right below the button */
     left: 0;
-    width: 100%;
+    width: 220px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;

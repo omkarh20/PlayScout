@@ -8,8 +8,8 @@ const BookDisplay = ({ selectedSport, selectedLocation }) => {
 
   // Filter courts based on selected sport and location
   const filteredCourts = COURT_list.filter((item) => {
-    const sportMatch = selectedSport === 'Select Sport' || item.sport === selectedSport;
-    const locationMatch = selectedLocation === 'Select Location' || item.courtLocation === selectedLocation;
+    const sportMatch = selectedSport === 'Select Sport' || selectedSport === 'All' || item.sport === selectedSport;
+    const locationMatch = selectedLocation === 'Select Location' || selectedLocation === 'All' || item.courtLocation === selectedLocation;
 
     return sportMatch && locationMatch;
   });

@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Bookheader.css';
 import { assets } from '../../assets/assets';
 import Location from '../Location/location';
 import Sports from '../Sport/Sport';
 import BookDisplay from '../Bookingdisplay/Bookdisplay';
+import { StoreContext } from '../../context/StoreContext';
 
 
 const Bookheader = () => {
-  const [selectedSport, setSelectedSport] = useState('Select Sport');
+  const {selectedSport, setSelectedSport} = useContext(StoreContext)
   const [selectedLocation, setSelectedLocation] = useState('Select Location');
 
   return (

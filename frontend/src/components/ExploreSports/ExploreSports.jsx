@@ -3,12 +3,13 @@ import './ExploreSports.css';
 import '../../assets/assets'
 import { assets, scroll } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
+import { Link } from 'react-router-dom';
 
 const ExploreSports = () => {
   const scrollLeftSports = () => scroll('explore-sports-list', -300);
   const scrollRightSports = () => scroll('explore-sports-list', 300);
 
-  const {sport_list} = useContext(StoreContext)
+  const {sport_list, setSelectedSport} = useContext(StoreContext);
 
   return (
     <div className="explore-sports-card">
@@ -19,10 +20,12 @@ const ExploreSports = () => {
           <div className="explore-sports-list">
             {sport_list.map((item, index) => {
               return (
-                <div key={index} className="explore-sports-list-item">
-                  <img src={item.sport_image} alt={item.sport_name} />
-                  <p>{item.sport_name}</p>
-                </div>
+                <Link to='/book' onClick={()=>setSelectedSport(item.sport_name)}>
+                  <div key={index} className="explore-sports-list-item">
+                    <img src={item.sport_image} alt={item.sport_name} />
+                    <p>{item.sport_name}</p>
+                  </div>
+                </Link>
               );
             })}
           </div>

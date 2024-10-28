@@ -3,9 +3,10 @@ import './ExploreVenues.css';  // renamed for consistency
 import { StoreContext } from '../../context/StoreContext';
 import Bookvenue from '../Bookvenue/Bookvenue';
 import {assets, scroll} from '../../assets/assets'
+import { Link } from 'react-router-dom';
 
 const ExploreVenues = () => {
-  const { COURT_list } = useContext(StoreContext);
+  const { COURT_list, menu, setMenu } = useContext(StoreContext);
 
   const scrollLeftVenues = () => scroll('explore-venues-list', -300);
   const scrollRightVenues = () => scroll('explore-venues-list', 300);
@@ -17,7 +18,7 @@ const ExploreVenues = () => {
   return (
     <div className='explore-venues-card'>
       <div className="explore-venues">
-        <h1>Explore Venues</h1>
+        <Link to='./book' onClick={() => setMenu("book")}><h1>Explore Venues</h1></Link>
         <div className="explore-venues-container">
           <img className="scroll-icon left-icon" src={assets.leftIcon} alt="Scroll Left" onClick={scrollLeftVenues} />
           <div className="explore-venues-list" id="explore-venues-list">

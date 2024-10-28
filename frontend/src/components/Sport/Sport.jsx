@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Sport.css';
 import { assets } from '../../assets/assets';
+import { StoreContext } from '../../context/StoreContext';
 
 const Sports = ({ setSelectedSport }) => { // Accept setSelectedSport prop
   const [showDropdown, setShowDropdown] = useState(false);
-  const [selectedSport, setSelectedSportLocal] = useState('Select Sport');
+  const {selectedSport} = useContext(StoreContext);
 
   const sports = [
+    'All',
     'Badminton',
     'Cricket',
     'Volleyball',
@@ -27,7 +29,6 @@ const Sports = ({ setSelectedSport }) => { // Accept setSelectedSport prop
   };
 
   const handleSportSelect = (sport) => {
-    setSelectedSportLocal(sport);
     setSelectedSport(sport); // Update parent state
     setShowDropdown(false);
   };

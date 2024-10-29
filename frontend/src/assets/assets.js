@@ -641,7 +641,6 @@ export const player_list = [
         location: "Sprint Field, RT Nagar, Bengaluru"
     }    
 ];
-
 export const COURT_list = [
     {
         _id: "court_cricket_3",
@@ -651,7 +650,8 @@ export const COURT_list = [
         courtsAvailable: 4,
         price: 1000,
         courtImage: ccourt3,
-        game_icon: cricket_icon
+        game_icon: cricket_icon,
+        rating: 4.3
     },
     {
         _id: "court_badminton_5",
@@ -661,7 +661,8 @@ export const COURT_list = [
         courtsAvailable: 2,
         price: 250,
         courtImage: bcourt5,
-        game_icon: badminton_icon
+        game_icon: badminton_icon,
+        rating: 4.7
     },
     {
         _id: "court_tabletennis_1",
@@ -671,7 +672,8 @@ export const COURT_list = [
         courtsAvailable: 1,
         price: 200,
         courtImage: tcourt1,
-        game_icon: tabletennis_icon
+        game_icon: tabletennis_icon,
+        rating: 4.5
     },
     {
         _id: "court_volleyball_1",
@@ -681,7 +683,8 @@ export const COURT_list = [
         courtsAvailable: 2,
         price: 220,
         courtImage: vcourt1,
-        game_icon: volleyball_icon
+        game_icon: volleyball_icon,
+        rating: 4.2
     },
     {
         _id: "court_badminton_1",
@@ -691,7 +694,8 @@ export const COURT_list = [
         courtsAvailable: 3,
         price: 200,
         courtImage: bcourt1,
-        game_icon: badminton_icon
+        game_icon: badminton_icon,
+        rating: 4.4
     },
     {
         _id: "court_tabletennis_2",
@@ -701,7 +705,8 @@ export const COURT_list = [
         courtsAvailable: 5,
         price: 175,
         courtImage: tcourt2,
-        game_icon: tabletennis_icon
+        game_icon: tabletennis_icon,
+        rating: 4.6
     },
     {
         _id: "court_volleyball_2",
@@ -711,7 +716,8 @@ export const COURT_list = [
         courtsAvailable: 3,
         price: 250,
         courtImage: vcourt2,
-        game_icon: volleyball_icon
+        game_icon: volleyball_icon,
+        rating: 4.1
     },
     {
         _id: "court_badminton_3",
@@ -721,7 +727,8 @@ export const COURT_list = [
         courtsAvailable: 5,
         price: 230,
         courtImage: bcourt3,
-        game_icon: badminton_icon
+        game_icon: badminton_icon,
+        rating: 4.3
     },
     {
         _id: "pool_swimming_1",
@@ -731,7 +738,8 @@ export const COURT_list = [
         courtsAvailable: 3,
         price: 450,
         courtImage: scourt1,
-        game_icon: swimming_icon
+        game_icon: swimming_icon,
+        rating: 4.8
     },
     {
         _id: "court_volleyball_3",
@@ -741,7 +749,8 @@ export const COURT_list = [
         courtsAvailable: 4,
         price: 280,
         courtImage: vcourt3,
-        game_icon: volleyball_icon
+        game_icon: volleyball_icon,
+        rating: 4.5
     },
     {
         _id: "court_badminton_4",
@@ -751,7 +760,8 @@ export const COURT_list = [
         courtsAvailable: 1,
         price: 240,
         courtImage: bcourt4,
-        game_icon: badminton_icon
+        game_icon: badminton_icon,
+        rating: 4.2
     },
     {
         _id: "court_cricket_1",
@@ -761,7 +771,8 @@ export const COURT_list = [
         courtsAvailable: 2,
         price: 1200,
         courtImage: ccourt1,
-        game_icon: cricket_icon
+        game_icon: cricket_icon,
+        rating: 4.6
     },
     {
         _id: "court_badminton_2",
@@ -771,7 +782,8 @@ export const COURT_list = [
         courtsAvailable: 4,
         price: 220,
         courtImage: bcourt2,
-        game_icon: badminton_icon
+        game_icon: badminton_icon,
+        rating: 4.4
     },
     {
         _id: "pool_swimming_2",
@@ -781,7 +793,8 @@ export const COURT_list = [
         courtsAvailable: 5,
         price: 500,
         courtImage: scourt2,
-        game_icon: swimming_icon
+        game_icon: swimming_icon,
+        rating: 4.9
     },
     {
         _id: "court_cricket_2",
@@ -791,7 +804,8 @@ export const COURT_list = [
         courtsAvailable: 3,
         price: 1100,
         courtImage: ccourt2,
-        game_icon: cricket_icon
+        game_icon: cricket_icon,
+        rating: 4.7
     },
     {
         _id: "pool_swimming_4",
@@ -801,7 +815,8 @@ export const COURT_list = [
         courtsAvailable: 4,
         price: 600,
         courtImage: scourt4,
-        game_icon: swimming_icon
+        game_icon: swimming_icon,
+        rating: 4.3
     },
     {
         _id: "pool_swimming_3",
@@ -811,6 +826,7 @@ export const COURT_list = [
         courtsAvailable: 2,
         price: 400,
         courtImage: scourt3,
-        game_icon: swimming_icon
+        game_icon: swimming_icon,
+        rating: 4.1
     }
 ];

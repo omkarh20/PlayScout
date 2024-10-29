@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './Bookdisplay.css'; 
 import { StoreContext } from '../../context/StoreContext';
 import Bookvenue from '../Bookvenue/Bookvenue'; 
+import { Link } from 'react-router-dom';
 
 const BookDisplay = ({ selectedSport, selectedLocation }) => {
   const { COURT_list } = useContext(StoreContext);
@@ -23,17 +24,18 @@ const BookDisplay = ({ selectedSport, selectedLocation }) => {
     <div className='booking-display'>
       <div className="booking-display-list">
         {filteredCourts.map((item) => (
-          <Bookvenue 
-            key={item._id} 
-            className='booking-display-list-item'
-            courtName={item.courtName}
-            courtLocation={item.courtLocation}
-            courtsAvailable={item.courtsAvailable}
-            price={item.price}
-            courtImage={item.courtImage}
-            game_icon={item.game_icon}
-            sport={item.sport}
-          />
+          <Link key={item._id} to={`/facility/${item._id}`}>
+            <Bookvenue 
+              className='booking-display-list-item'
+              courtName={item.courtName}
+              courtLocation={item.courtLocation}
+              courtsAvailable={item.courtsAvailable}
+              price={item.price}
+              courtImage={item.courtImage}
+              game_icon={item.game_icon}
+              sport={item.sport}
+            />
+          </Link>
         ))}
       </div>
     </div>

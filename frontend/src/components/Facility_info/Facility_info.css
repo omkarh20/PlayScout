@@ -1,0 +1,146 @@
+.facility-info-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.facility-details-box {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    border: 2px  #0e0d0d; /* Consistent border color */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Consistent shadow */
+    text-align: center;
+    max-width: 600px;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.facility-name {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.facility-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.facility-location,
+.facility-price,
+.facility-availability,
+.facility-sport {
+    font-size: 1em;
+    color:#0e0d0d;
+    margin: 8px 0;
+}
+
+.facility-location::before,
+.facility-price::before,
+.facility-availability::before,
+.facility-sport::before {
+    content: "\2022";
+    color: #e74c3c;
+    display: inline-block;
+    width: 1em;
+    margin-right: 5px;
+}
+
+.facility-game-icon {
+    width: 50px;
+    height: auto;
+    margin-top: 15px;
+}
+
+.available-courts-box {
+    padding: 20px;
+    border: 2px #0e0d0d; /* Consistent border color */
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Consistent shadow */
+    text-align: center; /* Center text in available courts box */
+    margin-top: 20px; /* Space between facility details and available courts */
+}
+
+.low-availability {
+    border-color: #e74c3c; /* Red border for low availability */
+}
+
+.high-availability {
+    border-color: #2a352f8b; /* Green border for high availability */
+}
+
+.court-buttons {
+    display: flex;
+    justify-content: center; /* Center the court buttons */
+    margin-top: 10px;
+}
+
+.court-button {
+    margin: 0 5px; /* Space between buttons */
+    padding: 10px 15px;
+    background-color: #3498db; /* Button background */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.court-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.rating-box {
+    margin-top: 20px; /* Space between available courts and rating */
+    border: 2px #0e0d0d; /* Consistent border color */
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Consistent shadow */
+    padding: 20px; /* Optional padding for better appearance */
+    text-align: center; /* Center text in rating box */
+}
+
+.facility-rating {
+    font-size: 1.2em; /* Slightly larger text */
+    color:#0e0d0d; /* A softer color for the rating */
+}
+
+.facility-error {
+    color: #e74c3c;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 20px;
+}
+
+.facility-loading {
+    color:#0e0d0d;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 20px;
+}
+
+.facility-rules {
+    margin-top: 20px; /* Space between components */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 2px #0e0d0d; /* Consistent border color */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Consistent shadow */
+    text-align: center; /* Center text */
+}
+
+.rules-list {
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.rule-item {
+    font-size: 1em;
+    color:#0e0d0d;
+    margin: 8px 0; /* Space between rules */
+}

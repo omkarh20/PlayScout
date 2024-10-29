@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer'
 import LoginPopup from './components/LoginPopup/LoginPopup'
 import Privacy from './pages/Privacy/Privacy'
 import Booking from './pages/Booking/Booking'
+import Facility from './pages/Facility/Facility'
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
           <Route path='/book' element={<Booking/>}/>
           <Route path='/meet' element={<Meet />} />
           <Route path='/privacy-policy' element={<Privacy />} />
+          <Route path='/facility/:id' element={<Facility/>}/>
         </Routes>
         <Footer />
       </div>

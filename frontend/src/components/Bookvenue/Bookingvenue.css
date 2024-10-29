@@ -1,6 +1,7 @@
 .booking-display {
     background-color: #f5f7f9;
     padding-bottom: 40px;
+    padding-top:20px;
 }
 
 .booking-display-list {
@@ -71,4 +72,24 @@
 .sport-name{
     display: inline;
     padding-left:-10px;
+}
+.court-component {
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 16px;
+    width: 100%; 
+    min-height: 300px; 
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.court-component:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }

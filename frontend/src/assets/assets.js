@@ -160,8 +160,9 @@ export const sport_list = [
 
 export const player_list = [
     {
-        _id: "1",
+        _id: 1,
         date: "16th Oct,2024  9:00-10:30",
+        filterDate: "10/16/2024",
         sportIcon: basketball_icon,
         sportName: "Basketball",
         userImage: m_avatar1,
@@ -169,11 +170,13 @@ export const player_list = [
         membersJoined: 1,
         totalMembers: 10,
         level: "Casual",
-        location: "Roar Basketball Academy, BTM 4th Stage, Bengaluru"
+        courtName: "Roar Basketball Academy",
+        location: "BTM 4th Stage, Bengaluru"
     },
     {
-        _id: "2",
+        _id: 2,
         date: "16th Oct,2024  11:00-12:00",
+        filterDate: "10/16/2024",
         sportIcon: badminton_icon,
         sportName: "Badminton",
         userImage: m_avatar3,
@@ -181,11 +184,13 @@ export const player_list = [
         membersJoined: 2,
         totalMembers: 4,
         level: "Professional",
-        location: "Prajwal Sports Enterprise, Banashankari,Bengaluru"
+        courtName: "Prajwal Sports Enterprise",
+        location: "Banashankari, Bengaluru"
     },
     {
-        _id: "3",
+        _id: 3,
         date: "16th Oct,2024  11:00-12:00",
+        filterDate: "10/16/2024",
         sportIcon: football_icon,
         sportName: "Football",
         userImage: m_avatar2,
@@ -193,11 +198,13 @@ export const player_list = [
         membersJoined: 2,
         totalMembers: 11,
         level: "Intermediate",
-        location: "Play Arena, HSR Layout, Bengaluru"
+        courtName: "Play Arena",
+        location: "HSR Layout, Bengaluru"
     },
     {
-        _id: "4",
+        _id: 4,
         date: "16th Oct,2024  11:00-13:00",
+        filterDate: "10/16/2024",
         sportIcon: cricket_icon,
         sportName: "Cricket",
         userImage: m_avatar5,
@@ -205,11 +212,13 @@ export const player_list = [
         membersJoined: 7,
         totalMembers: 11,
         level: "Professional",
-        location: "RTM Indoor Cricket, Hebbal,Bengaluru"
+        courtName: "RTM Indoor Cricket",
+        location: "Hebbal, Bengaluru"
     },
     {
-        _id: "5",
+        _id: 5,
         date: "16th Oct,2024  13:00-14:00",
+        filterDate: "10/16/2024",
         sportIcon: swimming_icon,
         sportName: "Swimming",
         userImage: m_avatar4,
@@ -217,11 +226,13 @@ export const player_list = [
         membersJoined: 3,
         totalMembers: 4,
         level: "Intermediate",
-        location: "SVM Swimming, RR Nagar,Bengaluru"
+        courtName: "SVM Swimming",
+        location: "RR Nagar, Bengaluru"
     },
     {
-        _id: "6",
+        _id: 6,
         date: "16th Oct,2024  13:00-14:30",
+        filterDate: "10/16/2024",
         sportIcon: tennis_icon,
         sportName: "Tennis",
         userImage: f_avatar3,
@@ -229,11 +240,13 @@ export const player_list = [
         membersJoined: 3,
         totalMembers: 4,
         level: "Casual",
-        location: "Play Feathers, Bannerghatta,Bengaluru"
+        courtName: "Play Feathers",
+        location: "Bannerghatta, Bengaluru"
     },
     {
-        _id: "7",
+        _id: 7,
         date: "16th Oct,2024  14:00-16:00",
+        filterDate: "10/16/2024",
         sportIcon: football_icon,
         sportName: "Football",
         userImage: m_avatar1,
@@ -241,11 +254,13 @@ export const player_list = [
         membersJoined: 8,
         totalMembers: 11,
         level: "Professional",
-        location: "Tiento Sports, Mission Road,Bengaluru"
+        courtName: "Tiento Sports",
+        location: "Mission Road, Bengaluru"
     },
     {
-        _id: "8",
+        _id: 8,
         date: "16th Oct,2024  14:30-16:00",
+        filterDate: "10/16/2024",
         sportIcon: badminton_icon,
         sportName: "Badminton",
         userImage: f_avatar4,
@@ -253,11 +268,13 @@ export const player_list = [
         membersJoined: 2,
         totalMembers: 4,
         level: "Intermediate",
-        location: "Wilson Garden Club,Bengaluru"
+        courtName: "Wilson Garden Club",
+        location: "Bengaluru"
     },
     {
-        _id: "9",
+        _id: 9,
         date: "16th Oct,2024  15:00-16:00",
+        filterDate: "10/16/2024",
         sportIcon: volleyball_icon,
         sportName: "Volleyball",
         userImage: f_avatar1,
@@ -265,11 +282,13 @@ export const player_list = [
         membersJoined: 4,
         totalMembers: 10,
         level: "Casual",
-        location: "Seven Switch Sports, ,Bengaluru"
+        courtName: "Seven Switch Sports",
+        location: "Bengaluru"
     },
     {
-        _id: "10",
+        _id: 10,
         date: "16th Oct,2024  15:00-16:00",
+        filterDate: "10/16/2024",
         sportIcon: chess_icon,
         sportName: "Chess",
         userImage: m_avatar4,
@@ -277,11 +296,13 @@ export const player_list = [
         membersJoined: 1,
         totalMembers: 2,
         level: "Intermediate",
-        location: "BTM Chess Club, BTM 2,Bengaluru"
+        courtName: "BTM Chess Club",
+        location: "BTM 2, Bengaluru"
     },
     {
-        _id: "11",
+        _id: 11,
         date: "16th Oct,2024  16:00-17:00",
+        filterDate: "10/16/2024",
         sportIcon: swimming_icon,
         sportName: "Swimming",
         userImage: m_avatar3,
@@ -289,11 +310,13 @@ export const player_list = [
         membersJoined: 2,
         totalMembers: 4,
         level: "Professional",
-        location: "Blue Bird Aquatic Centre, Kumarswamy Layout,Bengaluru"
+        courtName: "Blue Bird Aquatic Centre",
+        location: "Kumarswamy Layout, Bengaluru"
     },
     {
-        _id: "12",
+        _id: 12,
         date: "16th Oct,2024  18:00-19:00",
+        filterDate: "10/16/2024",
         sportIcon: squash_icon,
         sportName: "Squash",
         userImage: m_avatar2,
@@ -301,23 +324,27 @@ export const player_list = [
         membersJoined: 3,
         totalMembers: 4,
         level: "Casual",
-        location: "The BigBox, Rarajeshwari Nagar,Bengaluru"
+        courtName: "The BigBox",
+        location: "Rarajeshwari Nagar, Bengaluru"
     },
     {
-        _id: "13",
+        _id: 13,
         date: "17th Oct,2024  6:00-8:00",
-        sportIcon:  cricket_icon,
+        filterDate: "10/17/2024",
+        sportIcon: cricket_icon,
         sportName: "Cricket",
         userImage: m_avatar5,
         userName: "Prakash S",
         membersJoined: 12,
         totalMembers: 20,
         level: "Intermediate",
-        location: "Night Warchmen Cricket Ground, Dommasandra, Bengaluru"
+        courtName: "Night Warchmen Cricket Ground",
+        location: "Dommasandra, Bengaluru"
     },
     {
-        _id: "14",
+        _id: 14,
         date: "17th Oct,2024  7:00-8:00",
+        filterDate: "10/17/2024",
         sportIcon: hockey_icon,
         sportName: "Hockey",
         userImage: m_avatar3,
@@ -325,11 +352,13 @@ export const player_list = [
         membersJoined: 5,
         totalMembers: 10,
         level: "Professional",
-        location: "Gabriel Sports Club, Hennur Cross,Bengaluru"
+        courtName: "Gabriel Sports Club",
+        location: "Hennur Cross, Bengaluru"
     },
     {
-        _id: "15",
+        _id: 15,
         date: "17th Oct,2024  8:00-10:00",
+        filterDate: "10/17/2024",
         sportIcon: basketball_icon,
         sportName: "Basketball",
         userImage: f_avatar2,
@@ -337,11 +366,13 @@ export const player_list = [
         membersJoined: 5,
         totalMembers: 15,
         level: "Casual",
-        location: "Play Arena, Sarjapur Road,Bengaluru"
+        courtName: "Play Arena",
+        location: "Sarjapur Road, Bengaluru"
     },
     {
-        _id: "16",
+        _id: 16,
         date: "17th Oct,2024  8:00-10:00",
+        filterDate: "10/17/2024",
         sportIcon: chess_icon,
         sportName: "Chess",
         userImage: m_avatar1,
@@ -349,11 +380,13 @@ export const player_list = [
         membersJoined: 1,
         totalMembers: 2,
         level: "Intermediate",
-        location: "Grovies Sports Bistro, Niranthara Layout,Bengaluru"
+        courtName: "Grovies Sports Bistro",
+        location: "Niranthara Layout, Bengaluru"
     },
     {
-        _id: "17",
+        _id: 17,
         date: "17th Oct,2024  10:00-12:00",
+        filterDate: "10/17/2024",
         sportIcon: hockey_icon,
         sportName: "Hockey",
         userImage: m_avatar2,
@@ -361,11 +394,13 @@ export const player_list = [
         membersJoined: 8,
         totalMembers: 15,
         level: "Professional",
-        location: "Bull Ring Arena, Indiranagar,Bengaluru"
+        courtName: "Bull Ring Arena",
+        location: "Indiranagar, Bengaluru"
     },
     {
         _id: "18",
         date: "17th Oct,2024  12:00-13:30",
+        filterDate: "10/17/2024",
         sportIcon: tennis_icon,
         sportName: "Tennis",
         userImage: f_avatar5,
@@ -373,11 +408,13 @@ export const player_list = [
         membersJoined: 1,
         totalMembers: 4,
         level: "Casual",
-        location: "Game Theory, Indiranagar,Bengaluru"
+        courtName: "Game Theory",
+        location: "Indiranagar, Bengaluru"
     },
     {
         _id: "19",
         date: "17th Oct,2024  12:00-14:00",
+        filterDate: "10/17/2024",
         sportIcon: volleyball_icon,
         sportName: "Volleyball",
         userImage: m_avatar4,
@@ -385,11 +422,13 @@ export const player_list = [
         membersJoined: 4,
         totalMembers: 10,
         level: "Casual",
-        location: "Ekam Sports, Marathahalli,Bengaluru"
+        courtName: "Ekam Sports",
+        location: "Marathahalli, Bengaluru"
     },
     {
         _id: "20",
         date: "17th Oct,2024  13:00-14:00",
+        filterDate: "10/17/2024",
         sportIcon: squash_icon,
         sportName: "Squash",
         userImage: f_avatar5,
@@ -397,11 +436,13 @@ export const player_list = [
         membersJoined: 3,
         totalMembers: 4,
         level: "Professional",
-        location: "Fitness Cafe, Koramangala,Bengaluru"
+        courtName: "Fitness Cafe",
+        location: "Koramangala, Bengaluru"
     },
     {
         _id: "21",
         date: "17th Oct,2024  14:00-15:30",
+        filterDate: "10/17/2024",
         sportIcon: cricket_icon,
         sportName: "Cricket",
         userImage: m_avatar5,
@@ -409,11 +450,13 @@ export const player_list = [
         membersJoined: 9,
         totalMembers: 22,
         level: "Casual",
-        location: "TSG Sports Arena, Uttarahalli,Bengaluru"
+        courtName: "TSG Sports Arena",
+        location: "Uttarahalli, Bengaluru"
     },
     {
         _id: "22",
         date: "17th Oct,2024  14:00-15:30",
+        filterDate: "10/17/2024",
         sportIcon: swimming_icon,
         sportName: "Swimming",
         userImage: m_avatar1,
@@ -421,11 +464,13 @@ export const player_list = [
         membersJoined: 3,
         totalMembers: 5,
         level: "Intermediate",
-        location: "Endless Pool Fitness Centre, Mathikere,Bengaluru"
+        courtName: "Endless Pool Fitness Centre",
+        location: "Mathikere, Bengaluru"
     },
     {
         _id: "23",
         date: "17th Oct,2024  16:00-18:00",
+        filterDate: "10/17/2024",
         sportIcon: volleyball_icon,
         sportName: "Volleyball",
         userImage: m_avatar3,
@@ -433,11 +478,13 @@ export const player_list = [
         membersJoined: 3,
         totalMembers: 10,
         level: "Intermediate",
-        location: "Loop Sportsplex, Mahadevpura,Bengaluru"
+        courtName: "Loop Sportsplex",
+        location: "Mahadevpura, Bengaluru"
     },
     {
         _id: "24",
         date: "17th Oct,2024  17:00-18:00",
+        filterDate: "10/17/2024",
         sportIcon: squash_icon,
         sportName: "Squash",
         userImage: m_avatar2,
@@ -445,11 +492,13 @@ export const player_list = [
         membersJoined: 2,
         totalMembers: 4,
         level: "Intermediate",
-        location: "Spartan Arena, Rajajinagar, Bengaluru"
+        courtName: "Spartan Arena",
+        location: "Rajajinagar, Bengaluru"
     },
     {
         _id: "25",
         date: "17th Oct,2024  17:00-19:00",
+        filterDate: "10/17/2024",
         sportIcon: football_icon,
         sportName: "Football",
         userImage: f_avatar5,
@@ -457,11 +506,13 @@ export const player_list = [
         membersJoined: 9,
         totalMembers: 11,
         level: "Casual",
-        location: "Kixx Turf, Jayanagar, Bengaluru"
+        courtName: "Kixx Turf",
+        location: "Jayanagar, Bengaluru"
     },
     {
         _id: "26",
         date: "17th Oct,2024  18:00-19:00",
+        filterDate: "10/17/2024",
         sportIcon: badminton_icon,
         sportName: "Badminton",
         userImage: f_avatar3,
@@ -469,11 +520,13 @@ export const player_list = [
         membersJoined: 2,
         totalMembers: 4,
         level: "Professional",
-        location: "Feather Pro Court, Malleswaram, Bengaluru"
+        courtName: "Feather Pro Court",
+        location: "Malleswaram, Bengaluru"
     },
     {
         _id: "27",
         date: "17th Oct,2024  18:00-19:30",
+        filterDate: "10/17/2024",
         sportIcon: volleyball_icon,
         sportName: "Volleyball",
         userImage: m_avatar4,
@@ -481,24 +534,27 @@ export const player_list = [
         membersJoined: 5,
         totalMembers: 10,
         level: "Casual",
-        location: "Breeze Sports Hub, Whitefield, Bengaluru"
+        courtName: "Breeze Sports Hub",
+        location: "Whitefield, Bengaluru"
     },
     {
         _id: "28",
         date: "18th Oct,2024  7:00-8:00",
+        filterDate: "10/18/2024",
         sportIcon: tennis_icon,
         sportName: "Tennis",
         userImage: m_avatar1,
         userName: "Sanath P",
         membersJoined: 2,
         totalMembers: 4,
-
         level: "Intermediate",
-        location: "Court Slam, JP Nagar, Bengaluru"
+        courtName: "Court Slam",
+        location: "JP Nagar, Bengaluru"
     },
     {
         _id: "29",
         date: "18th Oct,2024  8:00-9:00",
+        filterDate: "10/18/2024",
         sportIcon: swimming_icon,
         sportName: "Swimming",
         userImage: f_avatar4,
@@ -506,11 +562,13 @@ export const player_list = [
         membersJoined: 3,
         totalMembers: 4,
         level: "Intermediate",
-        location: "AquaFit Arena, JP Nagar, Bengaluru"
+        courtName: "AquaFit Arena",
+        location: "JP Nagar, Bengaluru"
     },
     {
         _id: "30",
         date: "18th Oct,2024  9:00-10:00",
+        filterDate: "10/18/2024",
         sportIcon: badminton_icon,
         sportName: "Badminton",
         userImage: f_avatar3,
@@ -518,11 +576,13 @@ export const player_list = [
         membersJoined: 1,
         totalMembers: 4,
         level: "Casual",
-        location: "Smash Zone, Koramangala, Bengaluru"
+        courtName: "Smash Zone",
+        location: "Koramangala, Bengaluru"
     },
     {
         _id: "31",
         date: "17th Oct,2024  9:00-10:00",
+        filterDate: "10/17/2024",
         sportIcon: tabletennis_icon,
         sportName: "Table Tennis",
         userImage: m_avatar2,
@@ -530,11 +590,13 @@ export const player_list = [
         membersJoined: 2,
         totalMembers: 4,
         level: "Professional",
-        location: "Ping Pong Club, Jayanagar, Bengaluru"
+        courtName: "Ping Pong Club",
+        location: "Jayanagar, Bengaluru"
     },
     {
         _id: "32",
         date: "18th Oct,2024  10:00-11:00",
+        filterDate: "10/18/2024",
         sportIcon: volleyball_icon,
         sportName: "Volleyball",
         userImage: f_avatar5,
@@ -542,11 +604,13 @@ export const player_list = [
         membersJoined: 6,
         totalMembers: 10,
         level: "Intermediate",
-        location: "Volley Zone, Indiranagar, Bengaluru"
+        courtName: "Volley Zone",
+        location: "Indiranagar, Bengaluru"
     },
     {
         _id: "33",
         date: "18th Oct,2024  11:00-12:00",
+        filterDate: "10/18/2024",
         sportIcon: swimming_icon,
         sportName: "Swimming",
         userImage: m_avatar1,
@@ -554,11 +618,13 @@ export const player_list = [
         membersJoined: 2,
         totalMembers: 4,
         level: "Casual",
-        location: "Blue Wave Club, Banashankari, Bengaluru"
+        courtName: "Blue Wave Club",
+        location: "Banashankari, Bengaluru"
     },
     {
         _id: "34",
         date: "18th Oct,2024  12:00-14:00",
+        filterDate: "10/18/2024",
         sportIcon: cricket_icon,
         sportName: "Cricket",
         userImage: m_avatar4,
@@ -566,11 +632,13 @@ export const player_list = [
         membersJoined: 9,
         totalMembers: 22,
         level: "Intermediate",
-        location: "Max Turf, HSR Layout, Bengaluru"
+        courtName: "Max Turf",
+        location: "HSR Layout, Bengaluru"
     },
     {
         _id: "35",
         date: "18th Oct,2024  14:00-15:30",
+        filterDate: "10/18/2024",
         sportIcon: volleyball_icon,
         sportName: "Volleyball",
         userImage: m_avatar5,
@@ -578,11 +646,13 @@ export const player_list = [
         membersJoined: 5,
         totalMembers: 10,
         level: "Professional",
-        location: "Ace Sports Club, Frazer Town, Bengaluru"
+        courtName: "Ace Sports Club",
+        location: "Frazer Town, Bengaluru"
     },
     {
         _id: "36",
         date: "16th Oct,2024  16:00-17:00",
+        filterDate: "10/16/2024",
         sportIcon: tabletennis_icon,
         sportName: "Table Tennis",
         userImage: f_avatar1,
@@ -590,11 +660,13 @@ export const player_list = [
         membersJoined: 2,
         totalMembers: 4,
         level: "Casual",
-        location: "Spin Arena, Whitefield, Bengaluru"
+        courtName: "Spin Arena",
+        location: "Whitefield, Bengaluru"
     },
     {
         _id: "37",
         date: "19th Oct,2024  8:00-10:00",
+        filterDate: "10/19/2024",
         sportIcon: basketball_icon,
         sportName: "Basketball",
         userImage: m_avatar4,
@@ -602,11 +674,13 @@ export const player_list = [
         membersJoined: 6,
         totalMembers: 15,
         level: "Intermediate",
-        location: "Hoop House, Electronic City, Bengaluru"
+        courtName: "Hoop House",
+        location: "Electronic City, Bengaluru"
     },
     {
         _id: "38",
         date: "19th Oct,2024  9:00-10:30",
+        filterDate: "10/19/2024",
         sportIcon: badminton_icon,
         sportName: "Badminton",
         userImage: f_avatar1,
@@ -614,11 +688,13 @@ export const player_list = [
         membersJoined: 2,
         totalMembers: 4,
         level: "Professional",
-        location: "Racquet Zone, Hennur, Bengaluru"
+        courtName: "Racquet Zone",
+        location: "Hennur, Bengaluru"
     },
     {
         _id: "39",
         date: "19th Oct,2024  10:00-11:00",
+        filterDate: "10/19/2024",
         sportIcon: squash_icon,
         sportName: "Squash",
         userImage: m_avatar5,
@@ -626,11 +702,13 @@ export const player_list = [
         membersJoined: 3,
         totalMembers: 4,
         level: "Casual",
-        location: "ProFit Arena, Uttarahalli, Bengaluru"
+        courtName: "ProFit Arena",
+        location: "Uttarahalli, Bengaluru"
     },
     {
         _id: "40",
         date: "19th Oct,2024  11:00-13:00",
+        filterDate: "10/19/2024",
         sportIcon: football_icon,
         sportName: "Football",
         userImage: f_avatar3,
@@ -638,8 +716,11 @@ export const player_list = [
         membersJoined: 10,
         totalMembers: 11,
         level: "Intermediate",
-        location: "Sprint Field, RT Nagar, Bengaluru"
-    }    
+        courtName: "Sprint Field",
+        location: "RT Nagar, Bengaluru"
+    }
+    
+        
 ];
 
 export const COURT_list = [

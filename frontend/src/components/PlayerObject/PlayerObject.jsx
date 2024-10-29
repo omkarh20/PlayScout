@@ -2,7 +2,7 @@ import React from 'react';
 import './PlayerObject.css';
 import { assets } from '../../assets/assets';
 
-const PlayObject = ({ id, className,date, sportIcon, sportName, userImage, userName, membersJoined, totalMembers, level, location }) => {
+const PlayObject = ({ id, className,date, filterDate, sportIcon, sportName, userImage, userName, membersJoined, totalMembers, level, courtName, location }) => {
   return (
   <div className={`player-object ${className}`}>
     <div className="player-component">
@@ -23,7 +23,7 @@ const PlayObject = ({ id, className,date, sportIcon, sportName, userImage, userN
 
         <p className="members-joined">{membersJoined}/{totalMembers} Joined</p>
         <p className={`skill-level ${level.toLowerCase()}`}>{level}</p>
-        <p className='location'><img src={assets.location_icon} alt="location-icon" className="player-location-icon" /> {location}</p>
+        <p className='location'><img src={assets.location_icon} alt="location-icon" className="player-location-icon" /> {courtName+', '+location}</p>
       </div>
 
       <div className="player-buttons">

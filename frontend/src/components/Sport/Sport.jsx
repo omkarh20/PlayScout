@@ -3,9 +3,8 @@ import './Sport.css';
 import { assets } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
 
-const Sports = ({ setSelectedSport }) => { // Accept setSelectedSport prop
+const Sports = ({selectedSport ,setSelectedSport }) => { // Accept setSelectedSport prop
   const [showDropdown, setShowDropdown] = useState(false);
-  const {selectedSport} = useContext(StoreContext);
 
   const sports = [
     'All',

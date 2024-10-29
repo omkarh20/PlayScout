@@ -19,7 +19,7 @@ const Bookheader = () => {
         </div>
         <div className="book-bar">
            <Location setSelectedLocation={setSelectedLocation} />
-           <Sports setSelectedSport={setSelectedSport} />
+           <Sports selectedSport={selectedSport} setSelectedSport={setSelectedSport} />
         </div>
         <br/>
         <div className="book-line"></div>

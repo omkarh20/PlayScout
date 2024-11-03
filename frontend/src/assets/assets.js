@@ -1,5 +1,6 @@
 import search_icon from './search_icon.png'
 import profile_icon from './profile_icon.png'
+import logout_icon from './logout_icon.png'
 import logo from './logo.png'
 import basketball from './basketball.jpg'
 import cricket from './cricket.jpg'
@@ -74,6 +75,7 @@ import gcourt2 from './gcourt2.png';
 export const assets = {
     search_icon,
     profile_icon,
+    logout_icon,
     logo,
     facebook_icon,
     twitter_icon,

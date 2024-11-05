@@ -3,16 +3,19 @@ import './Navbar.css'
 import { assets } from '../../assets/assets'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
+import { Shield, ClipboardPen } from 'lucide-react';
 
-const Navbar = ({setShowLogin}) => {
+const Navbar = ({setShowLogin, setShowAdmin}) => {
 
   const { menu, setMenu, token, setToken } = useContext(StoreContext)
   const location = useLocation();
-
   const navigate = useNavigate();
+
+  const isAdmin = localStorage.getItem("isAdmin") === "true";
 
   const logout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("isAdmin");
     setToken("");
     navigate("/");
   }
@@ -29,8 +32,6 @@ const Navbar = ({setShowLogin}) => {
       setMenu('chat');
     } else if (currentPath === '/news') {
       setMenu('news');
-    } else if (currentPath === '/privacy-policy') {
-      setMenu('privacy-policy');
     } else {
       setMenu('');
     }
@@ -52,7 +53,19 @@ const Navbar = ({setShowLogin}) => {
         :<div className='navbar-profile'>
             <img src={assets.profile_icon} alt="" />
             <ul className='navbar-profile-dropdown'>
-              <li onClick={logout}><img src={assets.logout_icon} alt="" /><p>Logout</p></li>
+              <Link to='upcoming'><li><ClipboardPen style={{ color: 'red', paddingBottom: '10px', paddingRight: '6px'}} size={26} /><p style={{ paddingRight: '10px'}}>Upcoming</p></li></Link>
+              <hr />
+              {isAdmin ? (
+                <Link to="/admin">
+                  <li><Shield style={{ color: 'red', paddingBottom: '10px', paddingRight: '6px'}} size={26} /><p>Admin</p></li>
+                </Link>
+              ) : (
+                <li onClick={() => setShowAdmin(true)}>
+                  <Shield style={{ color: 'red', paddingBottom: '10px', paddingRight: '6px'}} size={26} /><p>Become Admin</p>
+                </li>
+              )}
+              <hr />
+              <li onClick={logout}><img src={assets.logout_icon} alt="" /><p style={{ paddingLeft: '5px'}}>Logout</p></li>
               <hr />
             </ul>
          </div>}

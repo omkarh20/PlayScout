@@ -14,7 +14,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage:storage});
 
-venueRouter.post("/add", upload.single("courtImage"), addVenue);
+venueRouter.post("/add", upload.single("court-image"), addVenue);
 venueRouter.get("/list", listVenue);
 venueRouter.post("/remove", removeVenue);
 

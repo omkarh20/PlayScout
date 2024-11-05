@@ -17,7 +17,7 @@ const BookDisplay = ({ selectedSport, selectedLocation }) => {
 
   // If no courts match the criteria, return a message
   if (filteredCourts.length === 0) {
-    return <div>No courts available for this category.</div>;
+    return <div>No more courts available for this category.</div>;
   }
 
   return (

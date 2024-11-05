@@ -20,7 +20,7 @@ const loginUser = async (req,res) => {
         }
         
         const token = createToken(user._id);
-        res.json({success:true,token});
+        res.json({ success: true, token, isAdmin: user.isAdmin });
 
     } catch (error) {
         console.log(error);
@@ -65,4 +65,30 @@ const registerUser = async (req,res) => {
     }
 }
 
-export {loginUser, registerUser}
+const makeAdmin = async (req,res) => {
+    const token = req.headers.authorization?.split(" ")[1];
+
+    if (!token) {
+        return res.status(401).json({ success: false, message: "Authorization token required" });
+    }
+
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const user = await userModel.findByIdAndUpdate(
+            decoded.id,
+            { isAdmin: true },
+            { new: true }
+        );
+
+        if (user) {
+            return res.json({ success: true, message: "User updated to admin successfully", isAdmin: user.isAdmin });
+        } else {
+            return res.status(404).json({ success: false, message: "User not found" });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: "Error updating admin status" });
+    }
+}
+
+export {loginUser, registerUser, makeAdmin}

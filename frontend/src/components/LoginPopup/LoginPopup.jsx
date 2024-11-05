@@ -34,6 +34,7 @@ const LoginPopup = ({setShowLogin}) => {
       if(response.data.success){
         setToken(response.data.token);
         localStorage.setItem("token",response.data.token);
+        localStorage.setItem("isAdmin", response.data.isAdmin);
         setShowLogin(false);
       }
       else{

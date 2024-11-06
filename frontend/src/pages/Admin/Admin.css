@@ -1,6 +1,6 @@
 .admin-container {
   padding: 1.5rem;
-  max-width: 56rem;
+  max-width: 65rem;
   margin: 0 auto;
 }
 
@@ -185,4 +185,8 @@
   height: 150px;
   object-fit: cover;
   border-radius: 4px;
+}
+
+.venue-table .remove-icon{
+  cursor: pointer;
 }

@@ -47,7 +47,7 @@ const removeVenue = async (req,res) => {
         const venue = await venueModel.findById(req.body.id);
         fs.unlink(`uploads/${venue.courtImage}`, ()=>{});
         await venueModel.findByIdAndDelete(req.body.id);
-        res.json({success:true, message: "Venue Removed"});
+        res.json({success:true, message: "Venue Removed!"});
     } catch (error) {
         console.log(error);
         res.json({success:false, message:"Error"});

@@ -20,15 +20,16 @@ const Admin = () => {
   const [venues, setVenues] = useState([]);
 
   // Fetch venues on component mount
+  const fetchVenues = async () => {
+    try {
+      const response = await axios.get(`${url}/api/venue/list`);
+      setVenues(response.data.data);
+    } catch (error) {
+      toast.error("Failed to fetch venues.");
+    }
+  };
+
   useEffect(() => {
-    const fetchVenues = async () => {
-      try {
-        const response = await axios.get(`${url}/api/venue/list`);
-        setVenues(response.data.data);
-      } catch (error) {
-        toast.error("Failed to fetch venues.");
-      }
-    };
     fetchVenues();
   }, [url]);
 
@@ -80,6 +81,7 @@ const Admin = () => {
         });
         setImagePreview(null);
         setVenues((prev) => [...prev, response.data.venue]);
+        fetchVenues();
         toast.success(response.data.message);
       } else {
         toast.error(response.data.message);
@@ -88,6 +90,17 @@ const Admin = () => {
       toast.error("Error adding venue.");
     }
   };
+
+  const removeVenue = async (venueID) =>{
+    const response = await axios.post(`${url}/api/venue/remove`, {id:venueID});
+    await fetchVenues();
+    if(response.data.success){
+      toast.success(response.data.message);
+    }
+    else{
+      toast.error("Error");
+    }
+  }
 
   return (
     <div className="admin-container">
@@ -228,6 +241,7 @@ const Admin = () => {
                     <th>Price/hr</th>
                     <th>Rating</th>
                     <th>Image</th>
+                    <th>Remove</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -244,6 +258,7 @@ const Admin = () => {
                       <td>
                         <img src={`${url}/images/${venue.courtImage}`} alt="Court" className="court-image" />
                       </td>
+                      <td><p onClick={()=>removeVenue(venue._id)} className='remove-icon'>x</p></td>
                     </tr>
                   ))}
                 </tbody>

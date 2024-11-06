@@ -44,7 +44,6 @@ const Bookvenue = ({ id, className, courtName, courtLocation, courtsAvailable, p
         </div>
       </div>
 
-      {/* Render the Bookpop when the button is clicked */}
       {showBooking && <Bookpop setShowBooking={setShowBooking} courtDetails={courtDetails} />}
     </div>
   );

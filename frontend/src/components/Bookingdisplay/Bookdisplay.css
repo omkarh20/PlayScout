@@ -5,7 +5,7 @@
 
 .booking-display-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Set to display exactly three items per row */
+    grid-template-columns: repeat(4, 1fr);
     gap: 50px;
     padding: 0 100px;
 }

@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
-import { sport_list,player_list, COURT_list} from "../assets/assets";
+import { sport_list} from "../assets/assets";
+import axios from "axios"
 
 export const StoreContext = createContext(null)
 
@@ -11,12 +12,28 @@ const StoreContextProvider = (props) => {
     const [startDate, setStartDate] = useState(null);
     const url="http://localhost:4000";
     const [token,setToken] = useState("");
-    {/*const [COURT_list, setCourtList] = useState([]);*/}
+    const [COURT_list, setCourtList] = useState([]);
+    const [player_list, setPlayerList] = useState([]);
+
+    const fetchGameList = async () => {
+        const response = await axios.get(url + "/api/game/game-list");
+        setPlayerList(response.data.data);
+    }
+
+    const fetchVenueList = async () => {
+        const response = await axios.get(url + "/api/venue/venue-list");
+        setCourtList(response.data.data);
+    }
 
     useEffect(()=>{
-        if(localStorage.getItem("token")){
-            setToken(localStorage.getItem("token"))
+        async function loadData() {
+            await fetchVenueList();
+            await fetchGameList();
+            if(localStorage.getItem("token")){
+                setToken(localStorage.getItem("token"))
+            }
         }
+        loadData();
     },[])
 
     const contextValue = {

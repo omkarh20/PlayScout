@@ -8,7 +8,8 @@ const venueSchema = new mongoose.Schema({
     price:{type:Number, required:true},
     courtImage:{type:String, required:true},
     game_icon:{type:String, required:true},
-    rating:{type:Number, default:0.0}
+    rating:{type:Number, default:0.0},
+    userID: { type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true }
 });
 
 const venueModel = mongoose.models.venue || mongoose.model("venue", venueSchema);

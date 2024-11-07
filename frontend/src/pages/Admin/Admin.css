@@ -173,14 +173,14 @@
   font-weight: bold;
 }
 
-.icon-image {
+.venue-table .icon-image {
   width: 50px;
   height: 50px;
   object-fit: cover;
   border-radius: 4px;
 }
 
-.court-image{
+.venue-table .court-image{
   width: 200px;
   height: 150px;
   object-fit: cover;

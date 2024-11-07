@@ -1,12 +1,17 @@
 import venueModel from "../models/venueModel.js";
 import fs from 'fs'
 import { sportIcons } from "../assetsBackend/assetsBackend.js";
+import jwt from 'jsonwebtoken';
 
 // add venue item
 const addVenue = async (req,res) => {
     let image_filename = `${req.file.filename}`;
     
     const { courtName, sport, courtLocation, courtsAvailable, price} = req.body;
+
+    const token = req.headers.authorization?.split(" ")[1];
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const userID = decoded.id;
 
     const game_icon = sportIcons[sport] || null;
 
@@ -18,7 +23,8 @@ const addVenue = async (req,res) => {
         price,
         courtImage: image_filename,
         game_icon,
-        rating: 0.0
+        rating: 0.0,
+        userID
     });
 
     try {
@@ -33,7 +39,11 @@ const addVenue = async (req,res) => {
 // venue list
 const listVenue = async (req,res) => {
     try {
-        const venues = await venueModel.find({});
+        const token = req.headers.authorization?.split(" ")[1];
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const userID = decoded.id;
+
+        const venues = await venueModel.find({userID});
         res.json({success:true, data:venues});
     } catch (error) {
         console.log(error);
@@ -54,4 +64,14 @@ const removeVenue = async (req,res) => {
     }
 };
 
-export {addVenue, listVenue, removeVenue};
+const listVenueBook = async (req,res) => {
+    try {
+        const venues = await venueModel.find();
+        res.json({success:true, data:venues});
+    } catch (error) {
+        console.log(error);
+        res.json({success:false, message:"Error"});
+    }
+}
+
+export {addVenue, listVenue, removeVenue, listVenueBook};

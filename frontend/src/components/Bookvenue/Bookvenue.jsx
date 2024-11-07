@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Bookingvenue.css'; 
 import { assets } from '../../assets/assets'; 
-import Bookpop from '../Bookpop/Bookpop'; // Import the Bookpop component
+import Bookpop from '../Bookpop/Bookpop';
+import { StoreContext } from '../../context/StoreContext';
 
 const Bookvenue = ({ id, className, courtName, courtLocation, courtsAvailable, price, courtImage, game_icon, sport }) => {
-  const [showBooking, setShowBooking] = useState(false); // State to manage the booking pop-up
+  const [showBooking, setShowBooking] = useState(false);
+  const {url} = useContext(StoreContext);
 
   if (!courtName || !courtLocation || !courtImage || courtsAvailable <= 0 || price === undefined) {
     return null; 
@@ -23,7 +25,7 @@ const Bookvenue = ({ id, className, courtName, courtLocation, courtsAvailable, p
       <div className="court-component">
         <div className="court-header">
           <img 
-            src={courtImage} 
+            src={`${url}/images/${courtImage}${courtImage.includes('.') ? '' : '.png'}`}  
             alt={courtName} 
             className="court-image" 
           />
@@ -32,7 +34,7 @@ const Bookvenue = ({ id, className, courtName, courtLocation, courtsAvailable, p
         <div className="court-content">
           <div className="court-info">
             <span className="court-name">{courtName}</span><br/>
-            <img src={game_icon} className="game_icon" alt={sport} /> 
+            <img src={`${url}/images/${game_icon}${game_icon.includes('.') ? '' : '.png'}`} className="game_icon" alt={sport} /> 
             <p className="sport-name">{sport}</p>
             <p className="court-location">{courtLocation}</p>
             <p className="court-price">Price: ₹{price}/hr</p>

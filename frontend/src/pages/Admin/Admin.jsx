@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 
 const Admin = () => {
   const { url } = useContext(StoreContext);
+  const token = localStorage.getItem('token');
   const [showAddForm, setShowAddForm] = useState(false);
   const [venueData, setVenueData] = useState({
     courtName: '',
@@ -22,7 +23,9 @@ const Admin = () => {
   // Fetch venues on component mount
   const fetchVenues = async () => {
     try {
-      const response = await axios.get(`${url}/api/venue/list`);
+      const response = await axios.get(`${url}/api/venue/list`, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
       setVenues(response.data.data);
     } catch (error) {
       toast.error("Failed to fetch venues.");
@@ -69,7 +72,9 @@ const Admin = () => {
     formData.append("court-image", venueData.courtImage);
 
     try {
-      const response = await axios.post(`${url}/api/venue/add`, formData);
+      const response = await axios.post(`${url}/api/venue/add`, formData, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
       if (response.data.success) {
         setVenueData({
           courtName: '',

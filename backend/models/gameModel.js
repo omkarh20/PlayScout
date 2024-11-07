@@ -11,7 +11,8 @@ const gameSchema = new mongoose.Schema({
     totalMembers:{type:Number, required:true},
     level:{type:String, required:true},
     courtName:{type:String, required:true},
-    location:{type:String, required:true}
+    location:{type:String, required:true},
+    userID: { type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true }
 });
 
 const gameModel = mongoose.models.game || mongoose.model("game", gameSchema);

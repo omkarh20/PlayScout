@@ -1,5 +1,5 @@
 import express from 'express'
-import { addGame } from '../controller/gameController.js'
+import { addGame, listGames } from '../controller/gameController.js'
 import multer from 'multer'
 
 const gameRouter = express.Router();
@@ -15,6 +15,7 @@ const storage = multer.diskStorage({
 const upload = multer({storage:storage});
 
 gameRouter.post("/add", upload.single("image"), addGame);
+gameRouter.get("/game-list", listGames);
 
 
 export default gameRouter;

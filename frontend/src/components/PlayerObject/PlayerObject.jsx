@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './PlayerObject.css';
 import { assets } from '../../assets/assets';
+import { StoreContext } from '../../context/StoreContext';
 
 const PlayObject = ({ id, className,date, filterDate, sportIcon, sportName, userImage, userName, membersJoined, totalMembers, level, courtName, location }) => {
+  const {url} = useContext(StoreContext);
+  
   return (
   <div className={`player-object ${className}`}>
     <div className="player-component">
@@ -12,12 +15,12 @@ const PlayObject = ({ id, className,date, filterDate, sportIcon, sportName, user
 
       <div className="player-content">
         <div className="sport-info">
-          <img src={sportIcon} alt="sport-icon" className="sport-icon" />
+          <img src={`${url}/images/${sportIcon}${sportIcon.includes('.') ? '' : '.png'}`} className="sport-icon" alt={sportName} />
           <span>{sportName}</span>
         </div>
 
         <div className="user-info">
-          <img src={userImage} alt="user-profile" className="user-image" />
+          <img src={`${url}/images/${userImage}${userImage.includes('.') ? '' : '.png'}`} className="user-image" alt={sportName} />
           <span>{userName}</span>
         </div>
 

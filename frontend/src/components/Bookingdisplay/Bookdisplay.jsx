@@ -23,19 +23,19 @@ const BookDisplay = ({ selectedSport, selectedLocation }) => {
   return (
     <div className='booking-display'>
       <div className="booking-display-list">
-        {filteredCourts.map((item) => (
-          <Link key={item._id} to={`/facility/${item._id}`}>
-            <Bookvenue 
-              className='booking-display-list-item'
-              courtName={item.courtName}
-              courtLocation={item.courtLocation}
-              courtsAvailable={item.courtsAvailable}
-              price={item.price}
-              courtImage={item.courtImage}
-              game_icon={item.game_icon}
-              sport={item.sport}
-            />
-          </Link>
+        {filteredCourts.map((item,index) => (
+          <Bookvenue 
+            key={index}
+            className='booking-display-list-item'
+            courtName={item.courtName}
+            courtLocation={item.courtLocation}
+            courtsAvailable={item.courtsAvailable}
+            price={item.price}
+            courtImage={item.courtImage}
+            game_icon={item.game_icon}
+            sport={item.sport}
+            id={item._id}
+          />
         ))}
       </div>
     </div>

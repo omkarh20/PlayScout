@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
 import './Bookingvenue.css'; 
-import { assets } from '../../assets/assets'; 
 import Bookpop from '../Bookpop/Bookpop';
 import { StoreContext } from '../../context/StoreContext';
+import { Link } from 'react-router-dom';
 
 const Bookvenue = ({ id, className, courtName, courtLocation, courtsAvailable, price, courtImage, game_icon, sport }) => {
   const [showBooking, setShowBooking] = useState(false);
-  const {url} = useContext(StoreContext);
+  const { url } = useContext(StoreContext);
 
   if (!courtName || !courtLocation || !courtImage || courtsAvailable <= 0 || price === undefined) {
     return null; 
@@ -17,12 +17,19 @@ const Bookvenue = ({ id, className, courtName, courtLocation, courtsAvailable, p
     courtLocation,
     price,
     game_icon,
-    sport
+    sport,
+    courtImage
+  };
+
+  const handleBookClick = (event) => {
+    event.stopPropagation();
+    setShowBooking(true);
   };
 
   return (
     <div className={`court-object ${className}`}>
       <div className="court-component">
+      <Link key={id} to={`/facility/${id}`} className="court-link">
         <div className="court-header">
           <img 
             src={`${url}/images/${courtImage}${courtImage.includes('.') ? '' : '.png'}`}  
@@ -40,9 +47,9 @@ const Bookvenue = ({ id, className, courtName, courtLocation, courtsAvailable, p
             <p className="court-price">Price: ₹{price}/hr</p>
           </div>
         </div>
-
+       </Link>
         <div className="court-buttons">
-          <button className="book-button" onClick={() => setShowBooking(true)}>Book</button>
+          <button className="book-button" onClick={handleBookClick}>Book</button>
         </div>
       </div>
 

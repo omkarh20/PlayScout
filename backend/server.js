@@ -4,6 +4,7 @@ import { connectDB } from "./config/db.js";
 import gameRouter from "./routes/gameRoute.js";
 import venueRouter from "./routes/venueRoute.js";
 import userRouter from "./routes/userRoute.js";
+import bookingsRouter from "./routes/bookingsRoute.js";
 
 // app config
 const app = express();
@@ -20,7 +21,8 @@ connectDB();
 app.use("/api/game", gameRouter);
 app.use("/api/venue", venueRouter);
 app.use("/images", express.static('uploads'));
-app.use("/api/user", userRouter)
+app.use("/api/user", userRouter);
+app.use("/api/bookings",bookingsRouter);
 
 app.get("/", (req,res)=>{
     res.send("API Working");

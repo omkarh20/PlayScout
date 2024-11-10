@@ -51,7 +51,7 @@ import chess_icon from './chess_icon.png'
 import tennis_icon from './tennis_icon.png'
 import tabletennis_icon from './tabletennis_icon.png'
 import yoga_icon from './yoga_icon.png'
-import f_avatar1 from './f_avatar1.png'
+{/*import f_avatar1 from './f_avatar1.png'
 import f_avatar2 from './f_avatar2.png'
 import f_avatar3 from './f_avatar3.png'
 import f_avatar4 from './f_avatar4.png'
@@ -60,7 +60,7 @@ import m_avatar1 from './m_avatar1.png'
 import m_avatar2 from './m_avatar2.png'
 import m_avatar3 from './m_avatar3.png'
 import m_avatar4 from './m_avatar4.png'
-import m_avatar5 from './m_avatar5.png'
+import m_avatar5 from './m_avatar5.png' */}
 import scourt1 from './scourt1.png';
 import scourt2 from './scourt2.png';
 import scourt3 from './scourt3.png';
@@ -102,16 +102,6 @@ export const assets = {
     tennis_icon,
     tabletennis_icon,
     yoga_icon,
-    f_avatar1,
-    f_avatar2,
-    f_avatar3,
-    f_avatar4,
-    f_avatar5,
-    m_avatar1,
-    m_avatar2,
-    m_avatar3,
-    m_avatar4,
-    m_avatar5
 }
 
 export const scroll = (className, scrollAmount) => {
@@ -160,6 +150,7 @@ export const sport_list = [
     }
 ]
 
+{/*
 export const player_list = [
     {
         _id: 1,
@@ -913,3 +904,5 @@ export const COURT_list = [
         rating: 4.1
     }
 ];
+
+*/}

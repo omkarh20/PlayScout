@@ -33,6 +33,7 @@ const ExploreVenues = () => {
                 courtImage={item.courtImage}
                 game_icon={item.game_icon}
                 sport={item.sport}
+                id={item._id}
               />
             ))}
           </div>

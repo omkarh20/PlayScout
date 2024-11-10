@@ -2,12 +2,14 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 import './Facility_info.css';
+import Bookpop from '../Bookpop/Bookpop';
 
 const FacilityInfo = () => {
   const { id } = useParams();
   const [court, setCourt] = useState(null);
   const [error, setError] = useState(null);
-  const { COURT_list } = useContext(StoreContext);
+  const { COURT_list,url } = useContext(StoreContext);
+  const [showBooking, setShowBooking] = useState(false);
 
   useEffect(() => {
     if (COURT_list) {
@@ -41,6 +43,10 @@ const FacilityInfo = () => {
     </p>
   );
 
+  const handleBookClick = (event) => {
+    setShowBooking(true);
+  };
+
   // Facility rules to be maintained
   const facilityRules = [
     "Respect the facility and fellow players.",
@@ -51,18 +57,28 @@ const FacilityInfo = () => {
     "Report any damages or issues to the staff."
   ];
 
+  const courtDetails = {
+    courtName:court.courtName,
+    courtLocation:court.courtLocation,
+    price:court.price,
+    game_icon:court.game_icon,
+    sport:court.sport
+  };
+
   return (
+  
     <div className="facility-info-container">
       <div className="facility-details-box">
         <h2 className="facility-name">{court.courtName}</h2>
-        <img className="facility-image" src={court.courtImage} alt={court.courtName} />
+        <img className="facility-image"  src={`${url}/images/${court.courtImage}${court.courtImage.includes('.') ? '' : '.png'}`} alt={court.courtName} />
         {renderGameDetail('Location', court.courtLocation)}
         {renderGameDetail('Price', `₹${court.price}/hr`)}
         {renderGameDetail('Available Courts', court.courtsAvailable)}
         {renderGameDetail('Sport', court.sport)}
-        <img className="facility-game-icon" src={court.game_icon} alt={court.sport} />
+        <img className="facility-game-icon" src={`${url}/images/${court.game_icon}${court.game_icon.includes('.') ? '' : '.png'}`}/>
       </div>
 
+      <div className="right-info">  
       <div className="center">
         {court.courtsAvailable > 0 && (
           <div className={`available-courts-box ${availabilityClass}`}>
@@ -76,7 +92,8 @@ const FacilityInfo = () => {
         )}
 
         {/* Rating Box */}
-        <div className="rating-box">
+         
+              <div className="rating-box">
           <h3>Rating</h3>
           <p className="facility-rating">{court.rating} ⭐</p>
         </div>
@@ -90,7 +107,15 @@ const FacilityInfo = () => {
             ))}
           </ul>
         </div>
+
+        <div className="facility-court-buttons">
+          <button className="facility-book-button" onClick={handleBookClick}>Book</button>
+        </div>
+        </div>
+ 
       </div>
+
+      {showBooking && <Bookpop setShowBooking={setShowBooking} courtDetails={courtDetails} />}
     </div>
   );
 };

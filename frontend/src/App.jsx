@@ -12,6 +12,7 @@ import Facility from './pages/Facility/Facility'
 import Admin from './pages/Admin/Admin'
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Upcoming from './pages/Upcoming/Upcoming'
 
 const App = () => {
 
@@ -32,6 +33,7 @@ const App = () => {
           <Route path='/privacy-policy' element={<Privacy />} />
           <Route path='/facility/:id' element={<Facility/>}/>
           <Route path='/admin' element={<Admin />}/>
+          <Route path='/upcoming' element={<Upcoming/>}/>
         </Routes>
         <Footer />
       </div>

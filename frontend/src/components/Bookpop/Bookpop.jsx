@@ -1,20 +1,60 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Bookpop.css'; 
 import { assets } from '../../assets/assets'; 
-import Date from '../Date/Date';
-// Import the Date component
+import { StoreContext } from '../../context/StoreContext';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import axios from "axios"
+import { toast } from 'react-toastify';
+import { format } from 'date-fns';
 
 const Bookpop = ({ setShowBooking, courtDetails }) => {
-  const { courtName, courtLocation, price, game_icon, sport } = courtDetails;
-  const [selectedDate, setSelectedDate] = useState(null); // State to store selected date
+  const { courtName, courtLocation, price, game_icon, sport, courtImage } = courtDetails;
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedSlot, setSelectedSlot] = useState(null);
+  const { url } = useContext(StoreContext);
+  const token = localStorage.getItem('token');
 
-  const handleConfirmBooking = () => {
-    if (selectedDate) {
-      console.log(`Booking confirmed for ${courtName} on ${selectedDate.toLocaleDateString()}`);
-      // Optionally close the popup after confirmation
+  const today = new Date();
+  const availableDates = [
+    today,
+    new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1),
+    new Date(today.getFullYear(), today.getMonth(), today.getDate() + 2)
+  ];
+
+  const handleConfirmBooking = async () => {
+    if (selectedDate && selectedSlot) {
+      const formattedDate = format(selectedDate, 'dd-MM-yyyy');
+      const bookingData = {
+        courtName,
+        courtLocation,
+        courtImage, 
+        sport,
+        membersJoined: 1, 
+        totalMembers: 1, 
+        date: formattedDate,
+        slot: selectedSlot
+      };
+    
+      try {
+        const response = await axios.post(`${url}/api/bookings/add-booking`, bookingData, {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        if (response.data.success) {
+          console.log("Booking confirmed and saved to database.");
+          toast.success(response.data.message);
+          setShowBooking(false);
+        } else {
+          console.error("Booking failed.");
+          toast.error(response.data.message);
+        }
+      } catch (error) {
+        console.error("Error saving booking:", error);
+      }
+      console.log(`Booking confirmed for ${courtName} on ${selectedDate.toLocaleDateString()} at ${selectedSlot}`);
       setShowBooking(false);
     } else {
-      alert("Please select a date before confirming the booking.");
+      alert("Please select both a date and a time slot before confirming the booking.");
     }
   };
 
@@ -27,26 +67,52 @@ const Bookpop = ({ setShowBooking, courtDetails }) => {
             onClick={() => setShowBooking(false)} 
             src={assets.cross_icon} 
             alt="Close" 
+            className='book-popup-close'
           />
         </div>
         <div className="book-popup-content">
           <div className="book-popup-info">
             <h3>{courtName}</h3>
-            <img src={game_icon} className="game_icon" alt={sport} />
+            <img className="game_icon" src={`${url}/images/${game_icon}${game_icon.includes('.') ? '' : '.png'}`} alt={sport} />
             <p className="sport-name">{sport}</p>
             <p className="court-location">{courtLocation}</p>
             <p className="court-price">Price: ₹{price}/hr</p>
           </div>
         </div>
+
         <div className="date-selection">
-         <Date  setDate={setSelectedDate}/> {/* Pass the setSelectedDate function to the Date component */}
+          <h4>Select Date:</h4>
+          <DatePicker
+            selected={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
+            includeDates={availableDates}
+            placeholderText="Select a date"
+            inline
+          />
+          <p>Selected Date: {selectedDate ? selectedDate.toLocaleDateString() : "None"}</p>
         </div>
+
+        <div className="slot-selection">
+          <h4>Select a Time Slot:</h4>
+          <div className="slot-options">
+            {['8:00-10:00', '13:00-15:00', '16:00-18:00'].map((slot) => (
+              <button 
+                key={slot} 
+                className={`slot-button ${selectedSlot === slot ? 'selected' : ''}`}
+                onClick={() => setSelectedSlot(slot)}
+              >
+                {slot}
+              </button>
+            ))}
+          </div>
+        </div>
+
         <div className="book-popup-actions">
           <button className="confirm-button" onClick={handleConfirmBooking}>Confirm Booking</button>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Bookpop;

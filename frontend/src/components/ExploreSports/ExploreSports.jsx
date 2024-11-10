@@ -20,8 +20,8 @@ const ExploreSports = () => {
           <div className="explore-sports-list">
             {sport_list.map((item, index) => {
               return (
-                <Link to='/book' onClick={()=>setSelectedSport(item.sport_name)}>
-                  <div key={index} className="explore-sports-list-item">
+                <Link to='/book' onClick={()=>setSelectedSport(item.sport_name)} key={item.sport_name}>
+                  <div className="explore-sports-list-item">
                     <img src={item.sport_image} alt={item.sport_name} />
                     <p>{item.sport_name}</p>
                   </div>

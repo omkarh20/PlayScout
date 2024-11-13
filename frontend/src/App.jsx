@@ -13,6 +13,7 @@ import Admin from './pages/Admin/Admin'
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Upcoming from './pages/Upcoming/Upcoming'
+import Chat from './pages/Chat/Chat'
 
 const App = () => {
 
@@ -34,6 +35,7 @@ const App = () => {
           <Route path='/facility/:id' element={<Facility/>}/>
           <Route path='/admin' element={<Admin />}/>
           <Route path='/upcoming' element={<Upcoming/>}/>
+          <Route path='/chat' element={<Chat/>}/>
         </Routes>
         <Footer />
       </div>

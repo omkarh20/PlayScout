@@ -1,10 +1,22 @@
-import React, { useContext } from 'react';
+import React, { useContext,useState } from 'react';
 import './PlayerObject.css';
 import { assets } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
+import { Link } from 'react-router-dom';
+import JoinPopup from '../JoinPopup/JoinPopup';
 
 const PlayObject = ({ id, className,date, filterDate, sportIcon, sportName, userImage, userName, membersJoined, totalMembers, level, courtName, location }) => {
   const {url} = useContext(StoreContext);
+  const [showJoinPopup, setShowJoinPopup] = useState(false);
+
+  const handleJoinClick = (event) => {
+    event.stopPropagation();
+    setShowJoinPopup(true);
+  };
+
+  const handleConfirmJoin = () => {
+    console.log("Join request confirmed");
+  };
   
   return (
   <div className={`player-object ${className}`}>
@@ -30,10 +42,12 @@ const PlayObject = ({ id, className,date, filterDate, sportIcon, sportName, user
       </div>
 
       <div className="player-buttons">
-        <button className="join-button">Join</button>
-        <button className="chat-button">Chat</button>
+        <button className="join-button" onClick={handleJoinClick}>Join</button>
+        <Link to='/chat'><button className="chat-button">Chat</button></Link>
       </div>
     </div>
+
+    {showJoinPopup && <JoinPopup setShowJoinPopup={setShowJoinPopup} onConfirm={handleConfirmJoin} />}
   </div>
   );
 }

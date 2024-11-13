@@ -6,6 +6,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
+  
     justify-content: center;
     align-items: flex-start;
     z-index: 1000;
@@ -16,7 +17,7 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
+    margin:150px 0px 100px 40px;
   }
   
   .form-group {
@@ -32,12 +33,13 @@
     border: 1px solid #ccc;
   }
   
-  .create-btn-submit {
+  .create-game-overlay .create-btn-submit {
     padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
+    background-color: rgb(205, 60, 60);;
+    color: rgb(250, 248, 248);
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    margin:0px 0px 0px 100px;
     cursor: pointer;
   }
   

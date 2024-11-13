@@ -5,6 +5,7 @@ import gameRouter from "./routes/gameRoute.js";
 import venueRouter from "./routes/venueRoute.js";
 import userRouter from "./routes/userRoute.js";
 import bookingsRouter from "./routes/bookingsRoute.js";
+import joinRouter from "./routes/joinRoute.js";
 
 // app config
 const app = express();
@@ -23,6 +24,7 @@ app.use("/api/venue", venueRouter);
 app.use("/images", express.static('uploads'));
 app.use("/api/user", userRouter);
 app.use("/api/bookings",bookingsRouter);
+app.use("/api/join",joinRouter);
 
 app.get("/", (req,res)=>{
     res.send("API Working");

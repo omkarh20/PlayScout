@@ -1,12 +1,9 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import './MeetHeader.css';
-import { assets } from '../../assets/assets'
 import Location from '../Location/location'
 import Date from '../Date/Date'
 import Sports from '../Sport/Sport'
-import PlayerDisplay from '../PlayerDisplay/PlayerDisplay';
 import { StoreContext } from '../../context/StoreContext';
-import CreateGame from '../CreateGame/CreateGame';
 
 const MeetHeader = () => {
   const {setSelectedMeetLocation, selectedMeetSport, setSelectedMeetSport, setStartDate} = useContext(StoreContext);
@@ -20,7 +17,6 @@ const MeetHeader = () => {
         <Location setSelectedLocation={setSelectedMeetLocation} />
         <Date setStartDate={setStartDate}/>
         <Sports selectedSport={selectedMeetSport} setSelectedSport={setSelectedMeetSport} />
-        <CreateGame />
         </div>
         <div className="meet-line"></div>
     </div>

@@ -27,7 +27,8 @@ const PlayerDisplay = ({ selectedMeetSport, selectedMeetLocation, startDate}) =>
                       sportIcon={item.sportIcon} 
                       sportName={item.sportName}
                       userImage={item.userImage} 
-                      userName={item.userName} 
+                      userName={item.userName}
+                      userID={item.userID} 
                       membersJoined={item.membersJoined} 
                       totalMembers={item.totalMembers} 
                       level={item.level}

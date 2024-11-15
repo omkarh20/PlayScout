@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 const BookDisplay = ({ selectedSport, selectedLocation }) => {
   const { COURT_list } = useContext(StoreContext);
 
-  // Filter courts based on selected sport and location
   const filteredCourts = COURT_list.filter((item) => {
     const sportMatch = selectedSport === 'Select Sport' || selectedSport === 'All' || item.sport === selectedSport;
     const locationMatch = selectedLocation === 'Select Location' || selectedLocation === 'All' || item.courtLocation === selectedLocation;
@@ -15,7 +14,6 @@ const BookDisplay = ({ selectedSport, selectedLocation }) => {
     return sportMatch && locationMatch;
   });
 
-  // If no courts match the criteria, return a message
   if (filteredCourts.length === 0) {
     return <div>No more courts available for this category.</div>;
   }

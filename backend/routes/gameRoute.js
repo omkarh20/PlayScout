@@ -1,21 +1,11 @@
 import express from 'express'
-import { addGame, listGames } from '../controller/gameController.js'
-import multer from 'multer'
+import { addGame, listGames, listPlannedGames, removeGame } from '../controller/gameController.js'
 
 const gameRouter = express.Router();
 
-// Image Storage Engine
-const storage = multer.diskStorage({
-    destination: "uploads",
-    filename: (req,file,cb) => {
-        return cb(null, `${Date.now()}${file.originalname}`);
-    }
-});
-
-const upload = multer({storage:storage});
-
-gameRouter.post("/add", upload.single("image"), addGame);
+gameRouter.post("/create-game", addGame);
 gameRouter.get("/game-list", listGames);
-
+gameRouter.get("/list-planned-games", listPlannedGames);
+gameRouter.post("/remove-game", removeGame);
 
 export default gameRouter;

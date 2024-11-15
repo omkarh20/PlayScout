@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react';
 import './Bookingvenue.css'; 
 import Bookpop from '../Bookpop/Bookpop';
+import CreateGame from '../CreateGame/CreateGame';
 import { StoreContext } from '../../context/StoreContext';
 import { Link } from 'react-router-dom';
 
 const Bookvenue = ({ id, className, courtName, courtLocation, courtsAvailable, price, courtImage, game_icon, sport }) => {
   const [showBooking, setShowBooking] = useState(false);
+  const [showCreateGame, setShowCreateGame] = useState(false);
   const { url } = useContext(StoreContext);
 
   if (!courtName || !courtLocation || !courtImage || courtsAvailable <= 0 || price === undefined) {
@@ -24,6 +26,11 @@ const Bookvenue = ({ id, className, courtName, courtLocation, courtsAvailable, p
   const handleBookClick = (event) => {
     event.stopPropagation();
     setShowBooking(true);
+  };
+
+  const handleCreateClick = (event) => {
+    event.stopPropagation();
+    setShowCreateGame(true);
   };
 
   return (
@@ -50,10 +57,12 @@ const Bookvenue = ({ id, className, courtName, courtLocation, courtsAvailable, p
        </Link>
         <div className="court-buttons">
           <button className="book-button" onClick={handleBookClick}>Book</button>
+          <button className="create-button" onClick={handleCreateClick}>Create</button>
         </div>
       </div>
 
       {showBooking && <Bookpop setShowBooking={setShowBooking} courtDetails={courtDetails} />}
+      {showCreateGame && <CreateGame setShowCreateGame={setShowCreateGame} courtDetails={courtDetails} />}
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
 const joinRequestSchema = new mongoose.Schema({
-  senderId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  recipientId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  bookingId: { type: mongoose.Schema.Types.ObjectId, ref: 'Booking', required: true },
+  senderId: { type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true },
+  recipientId: { type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true },
+  gameId: { type: mongoose.Schema.Types.ObjectId, ref: 'game', required: true },
   status: { type: String, enum: ['pending', 'accepted', 'declined'], default: 'pending' },
   createdAt: { type: Date, default: Date.now }
 });

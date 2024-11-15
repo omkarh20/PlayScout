@@ -5,7 +5,7 @@ import { StoreContext } from '../../context/StoreContext';
 import { Link } from 'react-router-dom';
 import JoinPopup from '../JoinPopup/JoinPopup';
 
-const PlayObject = ({ id, className,date, filterDate, sportIcon, sportName, userImage, userName, membersJoined, totalMembers, level, courtName, location }) => {
+const PlayObject = ({ id, className,date, filterDate, sportIcon, sportName, userImage, userName, userID,membersJoined, totalMembers, level, courtName, location }) => {
   const {url} = useContext(StoreContext);
   const [showJoinPopup, setShowJoinPopup] = useState(false);
 
@@ -47,7 +47,7 @@ const PlayObject = ({ id, className,date, filterDate, sportIcon, sportName, user
       </div>
     </div>
 
-    {showJoinPopup && <JoinPopup setShowJoinPopup={setShowJoinPopup} onConfirm={handleConfirmJoin} />}
+    {showJoinPopup && <JoinPopup setShowJoinPopup={setShowJoinPopup} onConfirm={handleConfirmJoin} recipientId={userID} gameId={id}/>}
   </div>
   );
 }

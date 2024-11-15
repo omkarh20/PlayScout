@@ -17,7 +17,7 @@ const Footer = () => {
             <li>About Us</li>
             <Link to='privacy-policy'><li>Privacy Policy</li></Link>
             <li>Contact Us</li>
-            <li className='contact'>+91-9456327543</li>
+            <li className='contact'>+91-9898989898</li>
             <li className='contact'>contact@playscout.com</li>
           </ul>
         </div>

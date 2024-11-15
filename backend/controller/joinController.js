@@ -1,9 +1,11 @@
 import joinModel from "../models/joinModel.js";
+import gameModel from "../models/gameModel.js";
 import jwt from "jsonwebtoken";
+import mongoose from "mongoose"
 
 const sendRequest = async (req, res) => {
     try {
-        const { recipientId, bookingId } = req.body;
+        const { recipientId, gameId } = req.body;
         const token = req.headers.authorization?.split(" ")[1];
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         const senderId = decoded.id;
@@ -11,7 +13,7 @@ const sendRequest = async (req, res) => {
         const joinRequest = new joinModel({
             senderId,
             recipientId,
-            bookingId,
+            gameId,
             status: 'pending',
         });
 
@@ -28,8 +30,9 @@ const getRequest = async (req, res) => {
         const token = req.headers.authorization?.split(" ")[1];
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         const userId = decoded.id;
+        const userObjectId = new mongoose.Types.ObjectId(userId);
 
-        const joinRequests = await joinModel.find({ recipientId: userId });
+        const joinRequests = await joinModel.find({ recipientId: userObjectId }).populate('senderId', 'name email');
         res.json({ success: true, data: joinRequests });
     } catch (error) {
         console.log(error);
@@ -53,6 +56,12 @@ const respondRequest = async (req, res) => {
 
         joinRequest.status = status;
         await joinRequest.save();
+        
+        if(joinRequest.status === 'accepted') {
+            const game = await gameModel.findById(joinRequest.gameId);
+            game.membersJoined += 1;
+            await game.save();
+        }
 
         res.json({ success: true, message: `Request ${status}` });
     } catch (error) {

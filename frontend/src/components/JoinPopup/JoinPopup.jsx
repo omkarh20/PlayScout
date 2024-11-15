@@ -1,4 +1,3 @@
-// JoinPopup.jsx
 import React, { useContext } from 'react';
 import './JoinPopup.css';
 import { assets } from '../../assets/assets';
@@ -6,7 +5,7 @@ import axios from 'axios';
 import { StoreContext } from '../../context/StoreContext';
 import { toast } from 'react-toastify';
 
-const JoinPopup = ({ setShowJoinPopup, recipientId, bookingId }) => {
+const JoinPopup = ({ setShowJoinPopup, recipientId, gameId }) => {
   const { url } = useContext(StoreContext);
   const token = localStorage.getItem('token');
 
@@ -14,7 +13,7 @@ const JoinPopup = ({ setShowJoinPopup, recipientId, bookingId }) => {
     try {
       const response = await axios.post(
         `${url}/api/join/send-request`, 
-        { recipientId, bookingId }, 
+        { recipientId, gameId}, 
         { headers: { Authorization: `Bearer ${token}` } }
       );
 

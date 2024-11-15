@@ -52,7 +52,8 @@ const StoreContextProvider = (props) => {
         setStartDate,
         url,
         token,
-        setToken
+        setToken,
+        fetchGameList
     }
     
     return (

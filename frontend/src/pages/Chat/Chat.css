@@ -20,11 +20,11 @@
 }
 
 .message {
-    margin-bottom: 12px; /* Increase spacing */
-    padding: 12px;       /* Increase padding */
+    margin-bottom: 12px;
+    padding: 12px;
     background-color: #d8cccc;
     border-radius: 8px;
-    font-size: 18px;     /* Increase font size */
+    font-size: 18px;
 }
 
 .input-container {

@@ -20,7 +20,7 @@ const loginUser = async (req,res) => {
         }
         
         const token = createToken(user._id);
-        res.json({ success: true, token, isAdmin: user.isAdmin });
+        res.json({ success: true, message:"Logged in!", token, isAdmin: user.isAdmin });
 
     } catch (error) {
         console.log(error);
@@ -57,7 +57,7 @@ const registerUser = async (req,res) => {
 
         const user = await newUser.save();
         const token = createToken(user._id);
-        res.json({success:true, token})
+        res.json({success:true, message:"Registered!",token})
 
     } catch (error) {
         console.log(error);

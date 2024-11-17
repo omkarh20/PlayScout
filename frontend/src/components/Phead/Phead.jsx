@@ -17,7 +17,7 @@ const Phead = () => {
                     </p>
                 </div>
             </div>
-            <div className="bottom"> {/* Corrected class name */}
+            <div className="bottom">
                 <p className="sort">Filter & Sort By</p>
                 <p className="sport">Sports</p>
                 <p className="date">Date</p>

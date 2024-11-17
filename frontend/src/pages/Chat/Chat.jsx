@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Chat.css';
 
 const Chat = () => {
@@ -13,6 +13,10 @@ const Chat = () => {
   };
 
   const handleInputChange = (e) => setInputText(e.target.value);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="chat-container">

@@ -43,7 +43,7 @@
 
 .Phead {
     display: flex;
-    justify-content: space-between; /* Use space-between for proper spacing */
+    justify-content: space-between;
     align-items: center;
 }
 

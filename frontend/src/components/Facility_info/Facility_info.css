@@ -9,8 +9,8 @@
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 20px;
-    border: 2px  #0e0d0d; /* Consistent border color */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Consistent shadow */
+    border: 2px  #0e0d0d;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     max-width: 600px;
     flex: 1;
@@ -58,56 +58,56 @@
 
 .available-courts-box {
     padding: 20px;
-    border: 2px #0e0d0d; /* Consistent border color */
+    border: 2px #0e0d0d;
     border-radius: 10px;
     background-color: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Consistent shadow */
-    text-align: center; /* Center text in available courts box */
-    margin-top: 20px; /* Space between facility details and available courts */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 20px;
 }
 
 .low-availability {
-    border-color: #e74c3c; /* Red border for low availability */
+    border-color: #e74c3c;
 }
 
 .high-availability {
-    border-color: #2a352f8b; /* Green border for high availability */
+    border-color: #2a352f8b;
 }
 
 .court-buttons {
     display: flex;
-    justify-content: center; /* Center the court buttons */
+    justify-content: center;
     margin-top: 10px;
 }
 
 .court-button {
-    margin: 0 5px; /* Space between buttons */
+    margin: 0 5px;
     padding: 10px 15px;
-    background-color: #3498db; /* Button background */
-    color: white; /* Button text color */
+    background-color: #3498db;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Transition effect */
+    transition: background-color 0.3s;
 }
 
 .court-button:hover {
-    background-color: #2980b9; /* Darker blue on hover */
+    background-color: #2980b9;
 }
 
 .rating-box {
-    margin-top: 20px; /* Space between available courts and rating */
-    border: 2px #0e0d0d; /* Consistent border color */
+    margin-top: 20px;
+    border: 2px #0e0d0d;
     border-radius: 10px;
     background-color: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Consistent shadow */
-    padding: 20px; /* Optional padding for better appearance */
-    text-align: center; /* Center text in rating box */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
 }
 
 .facility-rating {
-    font-size: 1.2em; /* Slightly larger text */
-    color:#0e0d0d; /* A softer color for the rating */
+    font-size: 1.2em;
+    color:#0e0d0d;
 }
 
 .facility-error {
@@ -125,25 +125,25 @@
 }
 
 .facility-rules {
-    margin-top: 20px; /* Space between components */
+    margin-top: 20px;
     padding: 15px;
     background-color: #f9f9f9;
-    border: 2px #0e0d0d; /* Consistent border color */
+    border: 2px #0e0d0d;
     border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Consistent shadow */
-    text-align: center; /* Center text */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .rules-list {
-    list-style-type: none; /* Remove default list style */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .rule-item {
     font-size: 1em;
     color:#0e0d0d;
-    margin: 8px 0; /* Space between rules */
+    margin: 8px 0;
 }
 
 .facility-book-button{

@@ -1,34 +1,31 @@
 .calendar-wrapper {
-    position: relative; /* Position the calendar relative to the button */
-  }
-  
-  .date-btn-book {
-    display: flex;
-    align-items: center;
-    padding: 10px 15px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .date-btn-book img {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-  }
-  
-  /* New container for the calendar */
-  .calendar-container {
-    position: absolute; /* Ensure the calendar appears below the button */
-    z-index: 1000; /* Ensure it appears above other elements */
-    top: 100%; /* Position it directly below the button */
-    left: 0; /* Align it to the left */
-    margin-top: 5px; /* Space between button and calendar */
-  }
-  
-  /* Style the datepicker */
-  .datepicker {
-    margin: 0; /* Remove default margins to align properly */
-  }
-  
+    position: relative;
+}
+
+.date-btn-book {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.date-btn-book img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.calendar-container {
+  position: absolute;
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+}
+
+.datepicker {
+  margin: 0;
+}

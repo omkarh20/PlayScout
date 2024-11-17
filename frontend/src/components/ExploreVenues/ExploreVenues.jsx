@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import './ExploreVenues.css';  // renamed for consistency
+import './ExploreVenues.css';
 import { StoreContext } from '../../context/StoreContext';
 import Bookvenue from '../Bookvenue/Bookvenue';
 import {assets, scroll} from '../../assets/assets'

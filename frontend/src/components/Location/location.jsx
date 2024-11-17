@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Location.css';
 import { assets } from '../../assets/assets';
 
-const Location = ({ setSelectedLocation }) => { // Accept setSelectedLocation prop
+const Location = ({ setSelectedLocation }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedLocation, setSelectedLocationLocal] = useState('Select Location');
 
@@ -46,7 +46,7 @@ const Location = ({ setSelectedLocation }) => { // Accept setSelectedLocation pr
 
   const handleLocationSelect = (location) => {
     setSelectedLocationLocal(location);
-    setSelectedLocation(location); // Update parent state
+    setSelectedLocation(location);
     setShowDropdown(false);
   };
 

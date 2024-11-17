@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import './Bookheader.css';
-import { assets } from '../../assets/assets';
 import Location from '../Location/location';
 import Sports from '../Sport/Sport';
 import BookDisplay from '../Bookingdisplay/Bookdisplay';

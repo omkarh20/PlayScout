@@ -1,9 +1,7 @@
 import venueModel from "../models/venueModel.js";
 import fs from 'fs'
-import { sportIcons } from "../assetsBackend/assetsBackend.js";
 import jwt from 'jsonwebtoken';
 
-// add venue item
 const addVenue = async (req,res) => {
     let image_filename = `${req.file.filename}`;
     
@@ -13,7 +11,7 @@ const addVenue = async (req,res) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const userID = decoded.id;
 
-    const game_icon = sportIcons[sport] || null;
+    const game_icon = `${sport.replace(/\s+/g, '').toLowerCase()}_icon` || null;
 
     const venue = new venueModel({
         courtName,
@@ -36,7 +34,6 @@ const addVenue = async (req,res) => {
     }
 }
 
-// venue list
 const listVenue = async (req,res) => {
     try {
         const token = req.headers.authorization?.split(" ")[1];
@@ -51,7 +48,6 @@ const listVenue = async (req,res) => {
     }
 };
 
-// remove venue
 const removeVenue = async (req,res) => {
     try {
         const venue = await venueModel.findById(req.body.id);

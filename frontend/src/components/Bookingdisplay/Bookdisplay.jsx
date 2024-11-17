@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import './Bookdisplay.css'; 
 import { StoreContext } from '../../context/StoreContext';
 import Bookvenue from '../Bookvenue/Bookvenue'; 
-import { Link } from 'react-router-dom';
 
 const BookDisplay = ({ selectedSport, selectedLocation }) => {
   const { COURT_list } = useContext(StoreContext);

@@ -1,9 +1,8 @@
 import React, { useContext, useState } from 'react';
 import './Sport.css';
 import { assets } from '../../assets/assets';
-import { StoreContext } from '../../context/StoreContext';
 
-const Sports = ({selectedSport ,setSelectedSport }) => { // Accept setSelectedSport prop
+const Sports = ({selectedSport ,setSelectedSport }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const sports = [
@@ -28,7 +27,7 @@ const Sports = ({selectedSport ,setSelectedSport }) => { // Accept setSelectedSp
   };
 
   const handleSportSelect = (sport) => {
-    setSelectedSport(sport); // Update parent state
+    setSelectedSport(sport);
     setShowDropdown(false);
   };
 

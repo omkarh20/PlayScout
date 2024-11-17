@@ -1,5 +1,12 @@
 import mongoose from "mongoose";
 
 export const connectDB = async () => {
-    await mongoose.connect('mongodb+srv://omkarhegde20:2015350199@cluster0.iewrs.mongodb.net/PlayScout').then(()=>console.log("DB Connected"));
+    const mongoURI = process.env.MONGO_URI;
+    if (!mongoURI) {
+        console.error("MongoDB URI is missing");
+        process.exit(1);
+    }
+    console.log(mongoURI);
+    
+    await mongoose.connect(mongoURI).then(()=>console.log("DB Connected"));
 }

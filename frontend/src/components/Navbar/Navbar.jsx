@@ -4,6 +4,7 @@ import { assets } from '../../assets/assets'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 import { Shield, ClipboardPen } from 'lucide-react';
+import {toast} from "react-toastify"
 
 const Navbar = ({setShowLogin, setShowAdmin}) => {
 
@@ -18,6 +19,7 @@ const Navbar = ({setShowLogin, setShowAdmin}) => {
     localStorage.removeItem("isAdmin");
     setToken("");
     navigate("/");
+    toast.success("Logged Out!");
   }
 
   useEffect(() => {

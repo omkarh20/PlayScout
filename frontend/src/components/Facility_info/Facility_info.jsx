@@ -33,10 +33,8 @@ const FacilityInfo = () => {
     return <div className="facility-loading">Loading...</div>;
   }
 
-  // Determine dynamic class based on available courts
   const availabilityClass = court.courtsAvailable <= 2 ? 'low-availability' : 'high-availability';
 
-  // Common rule to render game details
   const renderGameDetail = (label, value) => (
     <p className="facility-detail">
       <span className="facility-detail-label">{label}:</span> {value}
@@ -47,7 +45,6 @@ const FacilityInfo = () => {
     setShowBooking(true);
   };
 
-  // Facility rules to be maintained
   const facilityRules = [
     "Respect the facility and fellow players.",
     "No outside food or drinks allowed.",
@@ -90,15 +87,12 @@ const FacilityInfo = () => {
             </div>
           </div>
         )}
-
-        {/* Rating Box */}
          
               <div className="rating-box">
           <h3>Rating</h3>
           <p className="facility-rating">{court.rating} ⭐</p>
         </div>
 
-        {/* Facility Rules Section */}
         <div className="facility-rules">
           <h3>Facility Rules</h3>
           <ul className="rules-list">

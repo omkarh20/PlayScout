@@ -7,18 +7,14 @@ import userRouter from "./routes/userRoute.js";
 import bookingsRouter from "./routes/bookingsRoute.js";
 import joinRouter from "./routes/joinRoute.js";
 
-// app config
 const app = express();
 const port = 4000;
 
-// middleware
 app.use(express.json());
 app.use(cors());
 
-// db connection
 connectDB();
 
-// api endpoints
 app.use("/api/game", gameRouter);
 app.use("/api/venue", venueRouter);
 app.use("/images", express.static('uploads'));
@@ -33,5 +29,3 @@ app.get("/", (req,res)=>{
 app.listen(port, ()=>{
     console.log(`Server started on http://localhost:${port}`);
 });
-
-// mongodb+srv://omkarhegde20:2015350199@cluster0.iewrs.mongodb.net/?

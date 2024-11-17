@@ -106,7 +106,6 @@ const Upcoming = () => {
     <div className="upcoming-container">
       <h2>Upcoming Games</h2>
 
-      {/* Booked Section */}
       <div>
         <h3>Booked</h3>
         <table className="bookings-table">
@@ -155,7 +154,6 @@ const Upcoming = () => {
         </table>
       </div>
 
-      {/* Planned Section */}
       <div>
         <h3>Planned</h3>
         <table className="bookings-table">

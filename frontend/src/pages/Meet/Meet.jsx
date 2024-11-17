@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react'
 import './Meet.css'
 import MeetHeader from '../../components/MeetHeader/MeetHeader'
 import PlayerDisplay from '../../components/PlayerDisplay/PlayerDisplay'
-import CreateGame from '../../components/CreateGame/CreateGame'
 import { StoreContext } from '../../context/StoreContext'
 
 const Meet = () => {
@@ -14,8 +13,6 @@ const Meet = () => {
       setSelectedMeetSport('Select Sport');
     };
   }, []);
-
-  const [category,setCategory] = useState("All");
 
   return (
     <div>

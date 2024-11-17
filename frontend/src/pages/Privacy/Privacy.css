@@ -1,37 +1,37 @@
 .privacy-policy {
-    max-width: 800px; /* Limit the width of the content */
-    margin: 0 auto; /* Center the content */
-    padding: 20px; /* Add padding around the content */
-    font-family: Arial, sans-serif; /* Use a clean font */
-    line-height: 1.6; /* Improve readability */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
   }
   
   h1 {
-    font-size: 2.5em; /* Larger font for main heading */
-    margin-bottom: 10px; /* Space below the heading */
+    font-size: 2.5em;
+    margin-bottom: 10px;
   }
   
   h2 {
-    font-size: 2em; /* Size for secondary headings */
-    margin-top: 20px; /* Space above sections */
-    margin-bottom: 10px; /* Space below sections */
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
   
   h3 {
-    font-size: 1.5em; /* Size for subheadings */
-    margin-top: 15px; /* Space above subheadings */
+    font-size: 1.5em;
+    margin-top: 15px;
   }
   
   p {
-    margin-bottom: 10px; /* Space below paragraphs */
+    margin-bottom: 10px;
   }
   
   ul {
-    margin-left: 20px; /* Indent unordered lists */
-    margin-bottom: 10px; /* Space below lists */
+    margin-left: 20px;
+    margin-bottom: 10px;
   }
   
   strong {
-    font-weight: bold; /* Make bold text stand out */
+    font-weight: bold;
   }
   

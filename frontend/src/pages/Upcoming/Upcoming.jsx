@@ -5,10 +5,15 @@ import { StoreContext } from '../../context/StoreContext';
 import { toast } from 'react-toastify';
 
 const Upcoming = () => {
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  }, []);
+
   const [bookings, setBookings] = useState([]);
   const [plannedGames, setPlannedGames] = useState([]);
   const [requests, setRequests] = useState([]);
-  const { url, fetchGameList } = useContext(StoreContext);
+  const { url, fetchGameList, fetchVenueList } = useContext(StoreContext);
   const token = localStorage.getItem('token');
 
   const fetchBookings = async () => {
@@ -89,6 +94,22 @@ const Upcoming = () => {
         fetchGameList();
       } else {
         toast.error("Error removing game");
+      }
+    } catch (error) {
+      toast.error("Error");
+      console.error(error);
+    }
+  };
+
+  const cancelBooking = async(bookId) => {
+    try {
+      const response = await axios.post(`${url}/api/bookings/cancel-booking`, {id: bookId});
+      if(response.data.success) {
+        toast.success(response.data.message);
+        fetchBookings();
+        fetchVenueList();
+      } else{
+        toast.error("Error removing venue");
       }
     } catch (error) {
       toast.error("Error");

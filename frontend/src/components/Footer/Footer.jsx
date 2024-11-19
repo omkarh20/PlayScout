@@ -14,7 +14,6 @@ const Footer = () => {
         <div className="footer-content-center">
           <h2>Company</h2>
           <ul>
-            <li>About Us</li>
             <Link to='privacy-policy'><li>Privacy Policy</li></Link>
             <li>Contact Us</li>
             <li className='contact'>+91-9898989898</li>

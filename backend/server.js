@@ -6,6 +6,7 @@ import venueRouter from "./routes/venueRoute.js";
 import userRouter from "./routes/userRoute.js";
 import bookingsRouter from "./routes/bookingsRoute.js";
 import joinRouter from "./routes/joinRoute.js";
+import newsRouter from "./routes/newsRoute.js";
 
 const app = express();
 const port = 4000;
@@ -21,6 +22,7 @@ app.use("/images", express.static('uploads'));
 app.use("/api/user", userRouter);
 app.use("/api/bookings",bookingsRouter);
 app.use("/api/join",joinRouter);
+app.use("/api/news-list",newsRouter);
 
 app.get("/", (req,res)=>{
     res.send("API Working");

@@ -6,7 +6,6 @@ export const connectDB = async () => {
         console.error("MongoDB URI is missing");
         process.exit(1);
     }
-    console.log(mongoURI);
     
     await mongoose.connect(mongoURI).then(()=>console.log("DB Connected"));
 }

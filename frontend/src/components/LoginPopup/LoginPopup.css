@@ -66,6 +66,8 @@
     pointer-events: none; 
 }
 
+
+
 .login-popup-container button{
     border: none;
     padding: 10px;
@@ -97,3 +99,4 @@
     font-weight: 500;
     cursor: pointer;
 }
+

@@ -57,6 +57,7 @@ const FacilityInfo = () => {
   const courtDetails = {
     courtName:court.courtName,
     courtLocation:court.courtLocation,
+    courtImage:court.courtImage,
     price:court.price,
     game_icon:court.game_icon,
     sport:court.sport

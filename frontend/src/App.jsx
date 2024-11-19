@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
@@ -14,6 +14,7 @@ import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Upcoming from './pages/Upcoming/Upcoming'
 import Chat from './pages/Chat/Chat'
+import News from './pages/News/News'
 
 const App = () => {
 
@@ -36,6 +37,7 @@ const App = () => {
           <Route path='/admin' element={<Admin />}/>
           <Route path='/upcoming' element={<Upcoming/>}/>
           <Route path='/chat' element={<Chat/>}/>
+          <Route path='/news' element={<News/>}/>
         </Routes>
         <Footer />
       </div>

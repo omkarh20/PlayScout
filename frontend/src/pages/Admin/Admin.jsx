@@ -142,7 +142,7 @@ const Admin = () => {
                     onChange={handleInputChange}
                     placeholder="Enter court name"
                     required
-                    className="input"
+                    className="input-court"
                   />
                 </div>
                 <div className="form-group">

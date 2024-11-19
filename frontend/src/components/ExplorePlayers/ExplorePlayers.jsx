@@ -29,6 +29,7 @@ const ExplorePlayers = () => {
                       userName={item.userName} 
                       membersJoined={item.membersJoined} 
                       totalMembers={item.totalMembers} 
+                      courtName={item.courtName}
                       level={item.level}
                       location={item.location}
                     />

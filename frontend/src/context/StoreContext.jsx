@@ -53,7 +53,8 @@ const StoreContextProvider = (props) => {
         url,
         token,
         setToken,
-        fetchGameList
+        fetchGameList,
+        fetchVenueList
     }
     
     return (

@@ -9,7 +9,6 @@ const PlayObject = ({ id, className,date, filterDate, sportIcon, sportName, user
   const {url} = useContext(StoreContext);
   const [showJoinPopup, setShowJoinPopup] = useState(false);
 
-
   const handleJoinClick = (event) => {
     event.stopPropagation();
     setShowJoinPopup(true);

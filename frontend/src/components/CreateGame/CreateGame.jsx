@@ -31,8 +31,7 @@ const CreateGame = ({ setShowCreateGame, courtDetails }) => {
       const formattedDate = `${format(selectedDate, 'dd MMM, yyyy')} ${selectedSlot}`;
       const filterDate = format(selectedDate, 'MM/dd/yyyy');
       const sportIcon = `${sport.replace(/\s+/g, '').toLowerCase()}_icon`;
-      const userImages = ['m_avatar1', 'm_avatar2', 'm_avatar3', 'm_avatar4', 'm_avatar5'];
-      const userImage = userImages[Math.floor(Math.random() * userImages.length)];
+      const userImage = localStorage.getItem('userImage');
       
       const gameData = {
         date: formattedDate,

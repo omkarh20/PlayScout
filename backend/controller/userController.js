@@ -20,7 +20,7 @@ const loginUser = async (req,res) => {
         }
         
         const token = createToken(user._id);
-        res.json({ success: true, message:"Logged in!", token, isAdmin: user.isAdmin });
+        res.json({ success: true, message:"Logged in!", token, isAdmin: user.isAdmin, userId: user._id, userImage: user.userImage });
 
     } catch (error) {
         console.log(error);
@@ -33,7 +33,7 @@ const createToken = (id) => {
 }
 
 const registerUser = async (req,res) => {
-    const {name,email,password} = req.body;
+    const {name,email,password, userImage} = req.body;
     try {
         const exists = await userModel.findOne({email});
         if(exists){
@@ -52,12 +52,13 @@ const registerUser = async (req,res) => {
         const newUser = new userModel({
             name:name,
             email:email,
-            password:hashedPassword
+            password:hashedPassword,
+            userImage:userImage || "m_avatar1"
         })
 
         const user = await newUser.save();
         const token = createToken(user._id);
-        res.json({success:true, message:"Registered!",token})
+        res.json({success:true, message:"Registered!",token, userId: user._id, userImage: user.userImage});
 
     } catch (error) {
         console.log(error);

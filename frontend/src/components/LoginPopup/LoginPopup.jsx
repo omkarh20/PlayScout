@@ -6,7 +6,9 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 
 const LoginPopup = ({setShowLogin}) => {
-  const {url, setToken} = useContext(StoreContext);
+    const {url, setToken} = useContext(StoreContext);
+    const userImages = ['m_avatar1', 'm_avatar2', 'm_avatar3', 'm_avatar4', 'm_avatar5', 
+                        'f_avatar1', 'f_avatar2', 'f_avatar3', 'f_avatar4', 'f_avatar5', ];
 
     const [profileState, setProfileState] = useState("Login")
     const [data,setData] = useState({
@@ -29,13 +31,18 @@ const LoginPopup = ({setShowLogin}) => {
       }
       else{
         newUrl += "/api/user/register"
+        const userImage = userImages[Math.floor(Math.random() * userImages.length)];
+        data.userImage = userImage;
       }
+
 
       const response = await axios.post(newUrl, data);
       if(response.data.success){
         setToken(response.data.token);
         localStorage.setItem("token",response.data.token);
         localStorage.setItem("isAdmin", response.data.isAdmin);
+        localStorage.setItem("userId", response.data.userId);
+        localStorage.setItem("userImage", response.data.userImage);
         setShowLogin(false);
         toast.success(response.data.message);
       }

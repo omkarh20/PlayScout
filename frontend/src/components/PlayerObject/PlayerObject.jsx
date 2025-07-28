@@ -4,10 +4,12 @@ import { assets } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
 import { Link } from 'react-router-dom';
 import JoinPopup from '../JoinPopup/JoinPopup';
+import ChatPopup from '../ChatPopup/Chatpopup';
 
 const PlayObject = ({ id, className,date, filterDate, sportIcon, sportName, userImage, userName, userID,membersJoined, totalMembers, level, courtName, location }) => {
   const {url} = useContext(StoreContext);
   const [showJoinPopup, setShowJoinPopup] = useState(false);
+  const [showChatPopup, setShowChatPopup] = useState(false);
 
   const handleJoinClick = (event) => {
     event.stopPropagation();
@@ -16,6 +18,15 @@ const PlayObject = ({ id, className,date, filterDate, sportIcon, sportName, user
 
   const handleConfirmJoin = () => {
     console.log("Join request confirmed");
+  };
+
+  const handleChatClick = (event) => {
+    event.stopPropagation();
+    setShowChatPopup(true);
+  };
+
+  const handleConfirmChat = () => {
+    console.log("Chat request confirmed");
   };
   
   return (
@@ -43,11 +54,12 @@ const PlayObject = ({ id, className,date, filterDate, sportIcon, sportName, user
 
       <div className="player-buttons">
         <button className="join-button" onClick={handleJoinClick}>Join</button>
-        <Link to='/chat'><button className="chat-button">Chat</button></Link>
+        <button className="chat-button" onClick={handleChatClick}>Chat</button>
       </div>
     </div>
 
     {showJoinPopup && <JoinPopup setShowJoinPopup={setShowJoinPopup} onConfirm={handleConfirmJoin} recipientId={userID} gameId={id}/>}
+    {showChatPopup && <ChatPopup setShowChatPopup={setShowChatPopup} onConfirm={handleConfirmChat} recipientId={userID} recipientName={userName} userImage={userImage} />}
   </div>
   );
 }

@@ -2,21 +2,20 @@
 
 **PlayScout** is a sports facility booking platform where users can explore venues, join games, and communicate with other players in real-time. This project leverages the **MERN stack** (MongoDB, Express, React, Node.js) with integrated real-time chat functionality.
 
-> **Note**: Chat functionality has not been implemented yet.
-
 ## Features
 
 - **Sports Facility Booking**: Search and book facilities for various sports.
-- **Explore Players and Venues**: Browse players and venues via a responsive UI.
-- **Real-Time Chat**: Connect with other players in game-specific chat rooms.
+- **Explore Players and Venues**: Browse players and venues via a clean UI.
+- **Real-Time Chat**: Connect with other players to discuss plans for a booked game.
 - **Authentication**: User registration and login with access to personalized features.
 - **Admin Panel**: Admin registration which allows the user to add venues and manage them.
 - **News**: Trending sports news received from GNews API
-- **Responsive Design**: Optimized for mobile and desktop views.
 
 ## Home Page Preview
 
-![PlayScout Homepage](frontend/src/assets/homepage_screenshot.png)
+![PlayScout Homepage](previews/HomePage.png)
+
+The rest of the website previews are in the previews folder
 
 ## Tech Stack
 
@@ -43,11 +42,15 @@
 2. **Backend**:
 
    - Go to the `backend` folder,
-     (optional: set up a `.env` file with your `MONGO_URI` and `JWT_SECRET`) ,
-     then start the server:
+     set up a `.env` file inside it with your `MONGO_URI`, `JWT_SECRET` , and Google News API Key
+     ```env
+     JWT_SECRET = "random#secret"
+     MONGO_URI= "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/?retryWrites=true&w=majority"
+     G_API_KEY = "yourapikey"
+     ```
 
+     then install dependencies and start the server:
      ```bash
-     cd backend
      npm install
      npm run server
      ```

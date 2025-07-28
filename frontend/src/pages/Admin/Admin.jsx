@@ -34,6 +34,7 @@ const Admin = () => {
 
   useEffect(() => {
     fetchVenues();
+    console.log(venues)
   }, [url]);
 
   useEffect(() => {
@@ -254,7 +255,7 @@ const Admin = () => {
                     <tr key={venue._id}>
                       <td>{venue.courtName}</td>
                       <td>
-                        <img src={`${url}/images/${venue.game_icon}`} alt="Game Icon" className="icon-image" />
+                        <img src={`${url}/images/${venue.game_icon}${venue.game_icon.includes('.') ? '' : '.png'}`} alt="Game Icon" className="icon-image" />
                       </td>
                       <td>{venue.courtLocation}</td>
                       <td>{venue.courtsAvailable}</td>

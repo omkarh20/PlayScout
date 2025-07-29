@@ -2,6 +2,10 @@
 
 **PlayScout** is a sports facility booking platform where users can explore venues, join games, and communicate with other players in real-time. This project leverages the **MERN stack** (MongoDB, Express, React, Node.js) with integrated real-time chat functionality.
 
+The website is hosted at `https://playscout.onrender.com` - [PlayScout](https://playscout.onrender.com)
+The backend is hosted at `https://playscout-backend.onrender.com` - [PlayScout-backend](https://playscout-backend.onrender.com)
+
+
 ## Features
 
 - **Sports Facility Booking**: Search and book facilities for various sports.
@@ -42,14 +46,18 @@ The rest of the website previews are in the previews folder
 2. **Backend**:
 
    - Go to the `backend` folder,
-     set up a `.env` file inside it with your `MONGO_URI`, `JWT_SECRET` , and Google News API Key
+   - Create a `.env` file with your MongoDB URI, JWT secret, Google News API key, backend url and frontend url. The file should look like this:
+   > You can also use the frontend and backend urls mentioned in the beginning.
      ```env
-     JWT_SECRET = "random#secret"
-     MONGO_URI= "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/?retryWrites=true&w=majority"
-     G_API_KEY = "yourapikey"
+     JWT_SECRET="random#secret"
+     MONGO_URI="mongodb+srv://<username>:<password>@<cluster>.mongodb.net/?retryWrites=true&w=majority"
+     G_API_KEY="yourapikey"
+     REACT_APP_BACKEND_URL=http://localhost:4000
+     REACT_APP_FRONTEND_URL=http://localhost:5173
      ```
 
-     then install dependencies and start the server:
+   - Install dependencies and start the server:
+
      ```bash
      npm install
      npm run server
@@ -57,15 +65,21 @@ The rest of the website previews are in the previews folder
 
 3. **Frontend**:
 
-   - Go to the `frontend` folder, install dependencies, then start the app:
+   - Go to the `frontend` folder,
+   - Create a `.env` file with the backend and frontend URLs:
+   > Again, you can also use the frontend and backend urls mentioned in the beginning.
+
+     ```env
+     VITE_BACKEND_URL=http://localhost:4000
+     VITE_FRONTEND_URL=http://localhost:5173
+     ```
+
+   - Install dependencies and start the app:
 
      ```bash
-     cd frontend
      npm install
      npm run dev
      ```
-
-The frontend will run on `http://localhost:5173` and the backend on `http://localhost:4000` by default.
 
 ## Usage
 

@@ -11,6 +11,7 @@ export const getSportsNews = async (req, res) => {
         q: "sports AND (cricket OR football OR stadium)",
         country: "in",
         token: G_API_KEY,
+        lang: "en"
       },
     });
 

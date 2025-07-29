@@ -2,7 +2,7 @@
 
 **PlayScout** is a sports facility booking platform where users can explore venues, join games, and communicate with other players in real-time. This project leverages the **MERN stack** (MongoDB, Express, React, Node.js) with integrated real-time chat functionality.
 
-The website is hosted at `https://playscout.onrender.com` - [PlayScout](https://playscout.onrender.com)
+The website is hosted at `https://playscout.onrender.com` - [PlayScout](https://playscout.onrender.com)<br>
 The backend is hosted at `https://playscout-backend.onrender.com` - [PlayScout-backend](https://playscout-backend.onrender.com)
 
 

@@ -20,7 +20,7 @@ const io = new Server(server, {
     methods: ["GET", "POST"]
   }
 });
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 app.use(express.json());
 app.use(cors());

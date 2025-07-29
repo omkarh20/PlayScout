@@ -10,7 +10,7 @@ const StoreContextProvider = (props) => {
     const [selectedMeetSport, setSelectedMeetSport] = useState('Select Sport');
     const [selectedMeetLocation, setSelectedMeetLocation] = useState('Select Location');
     const [startDate, setStartDate] = useState(null);
-    const url="http://localhost:4000";
+    const url = import.meta.env.VITE_BACKEND_URL;
     const [token,setToken] = useState("");
     const [COURT_list, setCourtList] = useState([]);
     const [player_list, setPlayerList] = useState([]);

@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "6887b42d808631d2a6a7ff52"
+  },
+  "senderId": {
+    "$oid": "68876abbae4702a6915c6aeb"
+  },
+  "recipientId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "gameId": {
+    "$oid": "68876aa1ae4702a6915c6ae7"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-07-28T17:32:29.927Z"
+  },
+  "__v": 0
+}]

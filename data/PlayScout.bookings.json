@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "6887ad254648f6c091056254"
+  },
+  "userID": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "courtName": "Racquet Paradise",
+  "courtLocation": "Indiranagar, Bengaluru",
+  "courtImage": "bcourt5",
+  "sport": "Badminton",
+  "membersJoined": 1,
+  "totalMembers": 1,
+  "date": "29-07-2025",
+  "slot": "13:00-15:00",
+  "__v": 0
+}]

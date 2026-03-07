@@ -1,0 +1,272 @@
+[{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdaf"
+  },
+  "courtName": "Victory Court",
+  "sport": "Badminton",
+  "courtLocation": "MG Road, Bengaluru",
+  "courtsAvailable": 5,
+  "price": 230,
+  "courtImage": "bcourt3",
+  "game_icon": "badminton_icon",
+  "rating": 4.3,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdb5"
+  },
+  "courtName": "Blue Lagoon",
+  "sport": "Swimming",
+  "courtLocation": "Koramangala, Bengaluru",
+  "courtsAvailable": 5,
+  "price": 500,
+  "courtImage": "scourt2",
+  "game_icon": "swimming_icon",
+  "rating": 4.9,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdab"
+  },
+  "courtName": "Spike Zone",
+  "sport": "Volleyball",
+  "courtLocation": "Koramangala, Bengaluru",
+  "courtsAvailable": 2,
+  "price": 220,
+  "courtImage": "vcourt1",
+  "game_icon": "volleyball_icon",
+  "rating": 4.2,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdad"
+  },
+  "courtName": "Table Tango",
+  "sport": "Table Tennis",
+  "courtLocation": "MG Road, Bengaluru",
+  "courtsAvailable": 5,
+  "price": 175,
+  "courtImage": "tcourt2",
+  "game_icon": "tabletennis_icon",
+  "rating": 4.6,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdb6"
+  },
+  "courtName": "Boundary Line",
+  "sport": "Cricket",
+  "courtLocation": "Kalyan Nagar, Bengaluru",
+  "courtsAvailable": 3,
+  "price": 1100,
+  "courtImage": "ccourt2",
+  "game_icon": "cricket_icon",
+  "rating": 4.7,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdaa"
+  },
+  "courtName": "Spin City",
+  "sport": "Table Tennis",
+  "courtLocation": "Whitefield, Bengaluru",
+  "courtsAvailable": 1,
+  "price": 200,
+  "courtImage": "tcourt1",
+  "game_icon": "tabletennis_icon",
+  "rating": 4.5,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdb0"
+  },
+  "courtName": "Aqua Bliss",
+  "sport": "Swimming",
+  "courtLocation": "Indiranagar, Bengaluru",
+  "courtsAvailable": 3,
+  "price": 450,
+  "courtImage": "scourt1",
+  "game_icon": "swimming_icon",
+  "rating": 4.8,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdb1"
+  },
+  "courtName": "Beach Vibes",
+  "sport": "Volleyball",
+  "courtLocation": "Jayanagar, Bengaluru",
+  "courtsAvailable": 4,
+  "price": 280,
+  "courtImage": "vcourt3",
+  "game_icon": "volleyball_icon",
+  "rating": 4.5,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdb2"
+  },
+  "courtName": "Net Masters",
+  "sport": "Badminton",
+  "courtLocation": "Whitefield, Bengaluru",
+  "courtsAvailable": 1,
+  "price": 240,
+  "courtImage": "bcourt4",
+  "game_icon": "badminton_icon",
+  "rating": 4.2,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "673d6694e64815d925fa8b80"
+  },
+  "courtName": "test10",
+  "sport": "Basketball",
+  "courtLocation": "ahas",
+  "courtsAvailable": 5,
+  "price": 200,
+  "courtImage": "1732077204634basketball.jpg",
+  "game_icon": "basketball_icon",
+  "rating": 0,
+  "userID": {
+    "$oid": "672aeec5ac2e03f905b705c3"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bda9"
+  },
+  "courtName": "Racquet Paradise",
+  "sport": "Badminton",
+  "courtLocation": "Indiranagar, Bengaluru",
+  "courtsAvailable": 2,
+  "price": 250,
+  "courtImage": "bcourt5",
+  "game_icon": "badminton_icon",
+  "rating": 4.7,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bda8"
+  },
+  "courtName": "Pitch Perfect",
+  "sport": "Cricket",
+  "courtLocation": "Basavanagudi, Bengaluru",
+  "courtsAvailable": 4,
+  "price": 1000,
+  "courtImage": "ccourt3",
+  "game_icon": "cricket_icon",
+  "rating": 4.3,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdb4"
+  },
+  "courtName": "Feather Flight",
+  "sport": "Badminton",
+  "courtLocation": "Jayanagar, Bengaluru",
+  "courtsAvailable": 4,
+  "price": 220,
+  "courtImage": "bcourt2",
+  "game_icon": "badminton_icon",
+  "rating": 4.4,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdae"
+  },
+  "courtName": "Net Warriors",
+  "sport": "Volleyball",
+  "courtLocation": "Indiranagar, Bengaluru",
+  "courtsAvailable": 3,
+  "price": 250,
+  "courtImage": "vcourt2",
+  "game_icon": "volleyball_icon",
+  "rating": 4.1,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdb3"
+  },
+  "courtName": "Cricket Central",
+  "sport": "Cricket",
+  "courtLocation": "HSR Layout, Bengaluru",
+  "courtsAvailable": 2,
+  "price": 1200,
+  "courtImage": "ccourt1",
+  "game_icon": "cricket_icon",
+  "rating": 4.6,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdb7"
+  },
+  "courtName": "Crystal Clear",
+  "sport": "Swimming",
+  "courtLocation": "Malleswaram, Bengaluru",
+  "courtsAvailable": 4,
+  "price": 600,
+  "courtImage": "scourt4",
+  "game_icon": "swimming_icon",
+  "rating": 4.3,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdb8"
+  },
+  "courtName": "Splash Wave",
+  "sport": "Swimming",
+  "courtLocation": "Whitefield, Bengaluru",
+  "courtsAvailable": 2,
+  "price": 400,
+  "courtImage": "scourt3",
+  "game_icon": "swimming_icon",
+  "rating": 4.1,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "672cfccff10e1d551c02bdac"
+  },
+  "courtName": "Sky Smash Arena",
+  "sport": "Badminton",
+  "courtLocation": "Koramangala, Bengaluru",
+  "courtsAvailable": 3,
+  "price": 200,
+  "courtImage": "bcourt1",
+  "game_icon": "badminton_icon",
+  "rating": 4.4,
+  "userID": null
+},
+{
+  "_id": {
+    "$oid": "6887adec4648f6c091056263"
+  },
+  "courtName": "TestCourt",
+  "sport": "Volleyball",
+  "courtLocation": "Banashankari, Bengaluru",
+  "courtsAvailable": 4,
+  "price": 400,
+  "courtImage": "1753722348635volleyball_court1.jpg",
+  "game_icon": "volleyball_icon",
+  "rating": 0,
+  "userID": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "__v": 0
+}]

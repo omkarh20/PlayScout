@@ -1,0 +1,224 @@
+[{
+  "_id": {
+    "$oid": "6887721dae4702a6915c6b04"
+  },
+  "senderId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "recipientId": {
+    "$oid": "68876abbae4702a6915c6aeb"
+  },
+  "content": "hi",
+  "timestamp": {
+    "$date": "2025-07-28T12:50:37.653Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68877232ae4702a6915c6b0d"
+  },
+  "senderId": {
+    "$oid": "68876abbae4702a6915c6aeb"
+  },
+  "recipientId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "content": "hello",
+  "timestamp": {
+    "$date": "2025-07-28T12:50:58.783Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68877834656cd9375c0c1bd5"
+  },
+  "senderId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "recipientId": {
+    "$oid": "68876ae5ae4702a6915c6af2"
+  },
+  "content": "hello nipun",
+  "timestamp": {
+    "$date": "2025-07-28T13:16:36.204Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68877a07656cd9375c0c1be0"
+  },
+  "senderId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "recipientId": {
+    "$oid": "68876abbae4702a6915c6aeb"
+  },
+  "content": "sup",
+  "timestamp": {
+    "$date": "2025-07-28T13:24:23.494Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68877ba3656cd9375c0c1bf4"
+  },
+  "senderId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "recipientId": {
+    "$oid": "68876ae5ae4702a6915c6af2"
+  },
+  "content": "sup",
+  "timestamp": {
+    "$date": "2025-07-28T13:31:15.322Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68877d38656cd9375c0c1c1d"
+  },
+  "senderId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "recipientId": {
+    "$oid": "68876abbae4702a6915c6aeb"
+  },
+  "content": "how are you",
+  "timestamp": {
+    "$date": "2025-07-28T13:38:00.341Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68877fa4656cd9375c0c1c65"
+  },
+  "senderId": {
+    "$oid": "68876abbae4702a6915c6aeb"
+  },
+  "recipientId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "content": "I am fine",
+  "timestamp": {
+    "$date": "2025-07-28T13:48:20.704Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68877fa8656cd9375c0c1c6a"
+  },
+  "senderId": {
+    "$oid": "68876abbae4702a6915c6aeb"
+  },
+  "recipientId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "content": "You?",
+  "timestamp": {
+    "$date": "2025-07-28T13:48:24.013Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68877fce656cd9375c0c1c73"
+  },
+  "senderId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "recipientId": {
+    "$oid": "68876abbae4702a6915c6aeb"
+  },
+  "content": "i am fine too",
+  "timestamp": {
+    "$date": "2025-07-28T13:49:02.021Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68877ff3656cd9375c0c1c78"
+  },
+  "senderId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "recipientId": {
+    "$oid": "68876abbae4702a6915c6aeb"
+  },
+  "content": "Did you find more people to play with?",
+  "timestamp": {
+    "$date": "2025-07-28T13:49:39.611Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68878795f0f3cbf31bf28fbf"
+  },
+  "senderId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "recipientId": {
+    "$oid": "68876ae5ae4702a6915c6af2"
+  },
+  "content": "?",
+  "timestamp": {
+    "$date": "2025-07-28T14:22:13.875Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688788c7f0f3cbf31bf28fde"
+  },
+  "senderId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "recipientId": {
+    "$oid": "68876abbae4702a6915c6aeb"
+  },
+  "content": "we need 2 more",
+  "timestamp": {
+    "$date": "2025-07-28T14:27:19.470Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68890664c9807668acbdd4b8"
+  },
+  "senderId": {
+    "$oid": "68876ae5ae4702a6915c6af2"
+  },
+  "recipientId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "content": "Hi",
+  "timestamp": {
+    "$date": "2025-07-29T17:35:32.176Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68890671c9807668acbdd4bd"
+  },
+  "senderId": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "recipientId": {
+    "$oid": "68876ae5ae4702a6915c6af2"
+  },
+  "content": "hey",
+  "timestamp": {
+    "$date": "2025-07-29T17:35:45.285Z"
+  },
+  "__v": 0
+}]

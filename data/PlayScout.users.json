@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "68876a6dae4702a6915c6ae4"
+  },
+  "name": "Omkar",
+  "email": "omkarhegde20@gmail.com",
+  "password": "$2b$10$9YMTEC4iZaqmvq7UHn38GOb9m17u3WXwVeCTwdJ56zCCdxgnzAaEy",
+  "userImage": "m_avatar4",
+  "isAdmin": true,
+  "bookedData": {},
+  "gamesData": {},
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68876abbae4702a6915c6aeb"
+  },
+  "name": "Nithin",
+  "email": "nithin5454m@gmail.com",
+  "password": "$2b$10$kpYeylJyjf/cxR8wIVCB4uFPJJBtGumFRWdxd6G5W4ymqOJcpDQpy",
+  "userImage": "m_avatar2",
+  "isAdmin": false,
+  "bookedData": {},
+  "gamesData": {},
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68876ae5ae4702a6915c6af2"
+  },
+  "name": "Nipun",
+  "email": "nipun123@gmail.com",
+  "password": "$2b$10$DfYig4J3bhSsp9i7f4TS4efoyv85gsvMb4A2S7s3ROsBiSKfgG0su",
+  "userImage": "m_avatar1",
+  "isAdmin": false,
+  "bookedData": {},
+  "gamesData": {},
+  "__v": 0
+}]
